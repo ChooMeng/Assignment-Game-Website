@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DarkSoul News - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/News/darksoul.css" type="text/css">
+        <script src="../JavaScript/news.js"></script>
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a class="active" href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section id="news">
+            <a href="../news.html"><button id="back" name="back" >Back to news</button></a>
+        
+            <section id="right">
+            <nav class="vertical">
+                <h1>Top News</h1>
+                <ul style="list-style-image: url(../Media/leaf32.png);">
+                    <li><a href="acodyssey.html">Assassins Creed Odyssey</a></li>
+                   <li><a href="bulletstorm.html">Bulletstorm</li></a>
+                   <li><a href="callofduty.html">Call of Duty</a></li>
+                   <li><a href="darksoul.html">Dark Soul</a></li>
+                   <li><a href="halflife.html">Half Life</a></li>
+                   <li><a href="left4dead2.html">Left 4 Dead 2</a></li>
+                   <li><a href="outlast.html">Outlast</a></li>
+                </ul>
+             </nav>
+            </section>
+        
+        
+        
+            <div class="news">
+                
+                <div class="title"><h1>Dark Souls 4: Will It Happen, What to Expect?</h1>
+                <img id="pic" src="../Media/News/darksoul/1.jpg">
+                <p>I’m a Souls veteran. I’ve played Demon Souls all the way to Dark Souls 3. There’s also Bloodborne and Sekiro I’ve finished for that extra street cred. I know this doesn’t qualify me to MAKE a Souls game, but it does qualify me to talk about one. So, Dark Souls 4. I know Hidetaka Miyazaki only intended for a trilogy, but what if? And let’s say there is a Dark Souls 4, what the hell would it be about?</p>
+               <p>Dark Souls 3 was pretty damn conclusive, I’ll admit it. Still, I have reasons to believe we may see a Dark Souls 4 in the very distant future. Why? Well, let me walk you through the points one by one. Starting off:</p><br><br>
+        
+               <h1>Dark Souls 4 Gameplay, Features, And What Should It Be</h1>
+               <img id="pic" src="../Media/News/darksoul/2.jpg">
+               <p>It took From Software two attempts to nail the engine for Dark Souls. Say what you want about 1, the game played really badly sometimes. Don’t get me wrong, I still absolutely adore it. But if you go back to it right now, after playing through 3, you’ll see what I mean. It was so rigid, so clunky, stiff, and even unfair very often. You couldn’t even roll diagonally, and the remaster graciously came around without fixing ANYTHING. Don’t even get me started on the stupid PvP with backstabbing galore and lag souls.</p>
+               <p>With Dark Souls 2, they were onto something. The game did feel a lot smoother and faintly more refined as well, in comparison to its predecessor. The level design was pretty questionable though. Ambush gank after ambush gank after ambush gank. Don’t even get me started on some of the boss design since all I can remember as good fights were Alonne and the Ivory King. There were a lot of hitbox issues with the game as well. Then there was soul memory, the annoying barrier to not being able to summon your friends if you played on your own. The major thing Souls 2 did better was the power stancing mechanic.</p>
+               <p>Than Dark Souls 3 came out and the game was pure sex in video game form. The level design and lore weight of Dark Souls 1 but in a master-crafted engine. One that felt smooth, fast-paced and flexible as hell. Almost every boss fight was absolutely exhilarating. The visuals were also great and the optimization was smooth. Finally, the game’s PvP was strong enough to still be very active to this day. Every build every character you could make, the diversity was incredible. The only thing I missed from this game was honestly the power stancing. Though we got weapon arts to compensate for it.</p>
+               <p>Dark Souls 3 is living proof that From Software nailed the Souls gameplay formula. There are two ways we can look at this success. One way is that we can consider it and good send-off to the Souls series and not expect an installment in the future. Or, we could assume that it paves the way for an even greater continuation. Decide which side you’re on.</p><br><br>
+        
+               <h1>Dark Souls 4 Lifespan</h1>
+               <img id="pic" src="../Media/News/darksoul/3.jpg">
+               <p>Pertaining to what I said above, Dark Souls 3 had a huge life span. The game’s been out for years and is still making sales. Why? Because of the thoroughly filling PvP content. The games Sekiro Shadows Die Twice,<span style="color: brown;"> as well as the upcoming Elden’s Ring</span>, are both single-player only. I’m not saying they’re bad games because Sekiro was phenomenal. However, their single-player content puts a limit to the life span.</p>
+               <p>After all, what’s left to do in a single-player game after you finish it, right? You won’t find yourself coming back to Sekiro very often. With Dark Souls 3, a friend could hit you up and before you know it, you’re back doing NG 69 again. Dark Souls 4 would be set up to last for even more years on end if it comes out.</p><br><br>
+        
+               <h1>Dark Souls 4 Lore</h1>
+               <img id="pic" src="../Media/News/darksoul/4.jpg">
+               <p>Dark Souls is dummy thicc on the lore. The game series has so much hidden story left up to interpretation it’s crazy. One thing to note out of it is how we’ve only seen things post the glorious age of fire. Now I understand why. Going back before the age would take away from the charming gloomy atmosphere the Souls series was made of.</p>
+               <p>At the same time, it would be nice to explore that golden age. When the war against the dragons raged on and the ancients were at the height of their power. I’d love to fight characters like Gwyn and Artorias in their absolute prime, something we never truly got a taste of.</p>
+               <p>Another thing is that we always see the games set in the time of a fading flame. Every scenario starts with the assumption that somebody lit the flames and prolonged the age of fire. But what about the age of dark? We’ve only seen it in endings that act as What-if scenarios. I want to actually see an entire game set in the scenario where the flames died out. Something Dark Souls 4 could bring us. A Souls game set in the age of dark would be fun as hell.</p><br><br><br>
+            
+               <p><i id="like" onclick="like4()" class="fas fa-thumbs-up"></i></p>
+               <p id="result"></p>
+        
+            </div>  
+            <a href="halflife.html" ><button id="next" id="next">Next</div></a>    
+            </div>
+           
+            </div>
+            
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

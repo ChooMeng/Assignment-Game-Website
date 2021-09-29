@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buy More Things At Market Place - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/AboutUs/news_intro.css">
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <script src="../JavaScript/aboutus.js"></script>
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i style="color:black" class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a class="active" href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li class="active"><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li ><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <h1>Provide Latest News</h1>
+            <div>
+                <p style="color: rgb(0, 34, 126); border: rgb(216, 229, 250) solid 3px; background-color: rgb(158, 198, 221);"><a href="../news.html" title="Click here to the news page"><img src="../Media/Aboutus/news.png" class="image"></a>By receiving the information news, the user could know a lot of information from the games developer</p>
+            </div>
+            <div>
+                
+                <p style="color: rgb(126, 34, 183); border: rgb(201, 108, 255) solid 3px; background-color:rgb(225, 206, 236);"><a href="../News/acodyssey.html"><img src="../Media/Aboutus/newshead.png" class="image"></a>
+                    To let our respected users keep up to date with the games information, we have designed a news page to let them visit for more information of the related games.</p>
+            </div>
+            <div>
+                <p style="color: rgb(68, 86, 110); border: rgb(82, 82, 82) solid 3px; background-color: rgb(189, 189, 189);"><a href="../News/left4dead2.html#video"><img src="../Media/Aboutus/newsvideo.png" class="image"></a>
+                    If the user feels boring to read to these article. They can go to watch some of the video also... </p>
+            </div>
+            <div>
+                <p style="color: rgb(141, 236, 119); border: rgb(114, 228, 49) solid 3px; background-color: rgb(222, 255, 203);"><a href="../News/callofduty.html#like"><img src="../Media/Aboutus/newstail.png" class="image"></a>
+                    Why don't you hit the like button after reading our article if you like it? ( Just hit it whatever! ! )
+                    <br><br><br><br>
+                    <span><i id="like" onclick="like()" class="fas fa-thumbs-up" style="color: rgb(114, 228, 49);"></i></span><br><br>
+                    <span id="result" style="color: rgb(141, 236, 119);"></span>
+                </p>
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

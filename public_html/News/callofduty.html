@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CallofDuty News - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/News/callofduty.css" type="text/css">
+        <script src="../JavaScript/news.js"></script>
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a class="active" href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section id="news">
+            <a href="../news.html"><button id="back" name="back" >Back to news</button></a>
+        
+            <section id="right">
+            <nav class="vertical">
+                <h1>Top News</h1>
+                <ul style="list-style-image: url(../Media/leaf32.png);">
+                    <li><a href="acodyssey.html">Assassins Creed Odyssey</a></li>
+                   <li><a href="bulletstorm.html">Bulletstorm</li></a>
+                   <li><a href="callofduty.html">Call of Duty</a></li>
+                   <li><a href="darksoul.html">Dark Soul</a></li>
+                   <li><a href="halflife.html">Half Life</a></li>
+                   <li><a href="left4dead2.html">Left 4 Dead 2</a></li>
+                   <li><a href="outlast.html">Outlast</a></li>
+                 
+                </ul>
+             </nav>
+            </section>
+        
+        
+        
+            <div class="news">
+                
+                <div class="title"><h1>CALL OF DUTY®: WARZONE MODE RECON: BATTLE ROYALE QUADS</h1><br><br>
+                
+                
+                <p>Season Three of Warzone brought in Quads, a twist on the game’s standard Battle Royale by way of adding an extra squadmate to each fireteam.</p>
+        
+                <p>A fourth squad member may not seem like much, unless you consider that’s much more firepower being added to each and every team, and that a one-on-four situation is much scarier than a 1v3.</p>
+        
+                <p>So, call up that friend to round out your trio out to quads, and dive into this Mode Recon on Quads:</p>
+                <img id="pic" src="../Media/News/callofduty/1.jpg"><br><br> 
+        
+                <h1>Quads Overview</h1>
+                <p>In Quads, you and three other Squadmates drop into Verdansk with Battle Royale rules. If you are unfamiliar with Battle Royale, read our Mode Recon on it here.</p>
+        
+                <p>Your Quad members can either be your friends, or random players if you load into a Quad lobby without a full party and the Squad Fill option turned on. After the full squad – or should we say, Quad – readies up, participates in the pre-game lobby, and drops into Verdansk safely, your mission is to outlast all the other teams.</p>
+        
+                <p>When one of your squadmates goes down, you have the opportunity to revive them before they bleed out and lose their loadout. Doing so will save them a trip to the Gulag, where they will fight in a 1v1 to earn their right back into the game.</p>
+        
+                <p>If they die in the Gulag, or perish when they return from it, you can still redeploy that squadmate back into the match at a Buy Station.</p>
+        
+                <p>While you loot and hunt around Verdansk, the Circle Collapse will limit the playable area, forcing squads to fight until only one remains. The last squad standing – even if it is a single member of that squad – wins the game.</p>
+                <img id="pic" src="../Media/News/callofduty/2.jpg"><br><br> 
+        
+                <h1>Quads Strategies</h1>
+                <p>Because every squad has an additional Operator, being a team player becomes even more important for your squad’s survival. What does this look like? </p>
+        
+                <p>Agreeing on a landing zone, pinging and calling out loot locations or enemy movements, ensuring everyone has a ride or an alternative means of transportation, and reviving each other are just some of the ways one can be a team player.</p>
+        
+                <p>Having an additional Operator will also make certain Contracts easier, such as Scavenger Contracts, where your team can split up slightly to capture Resupply Boxes scattered around the map.</p>
+        
+                <p>Collecting Loot, finding Supply Boxes, and completing Contracts will help you build a loadout, which will protect you against – or help you take down – enemy players. Cash found around Verdansk will allow you to use Buy Stations, which offers Killstreaks, Field Upgrades, Self-Revive Kits, and Loadout Drops, a way to get your own custom loadout in Verdansk, the ability to buy Squadmates back into the game, and more.</p>
+                
+                <p>No matter how you and your quad get through Verdansk, it’s most important to learn from losses. Chances are, your quad may not win every single game, so when those losses do happen, brush yourselves off, take away lessons from your defeat, and ready up for the next one.</p>
+                <img id="pic" src="../Media/News/callofduty/3.jpg"><br><br> 
+        
+                <h1>Top 5 Tips for Quads</h1>
+                <p><strong><span style="color: orange;">5. Sharing is Caring.</strong></span>  Do you have the maximum amount of sniper ammo while a squadmate that actually has a sniper has none? Is someone just $500 shy of purchasing a Loadout Drop? Share your loot with your squad – it doesn’t hurt to be a team player.</p>
+        
+                <p><strong><span style="color: orange;">4. Operators for Hire.</strong></span> With four members on your squad, it may be a good idea to pursue some Contracts so that everyone can get a decent payday. Use the increase in squad size to capture those Recon objectives quicker, or loot Resupply Boxes within seconds.</p>
+        
+                <p><strong><span style="color: orange;">3. Track Down the Lone Wolves.</strong></span> A single Operator is at a severe disadvantage going up against a full Quad. If you suspect that an Operator is flying solo, check the surrounding area for additional enemies and, once the coast is clear, go for the (hopefully easy) take down.</p>
+        
+                <p><strong><span style="color: orange;">2. Never Walk Alone.</strong></span> Conversely, because each squad has four members on it, straying too far away from your pack may as well be a death sentence. Stick together with your squad, and you’ll have a better chance at survival.</p>
+        
+                <p><strong><span style="color: orange;">1. Teamwork. Teamwork. Teamwork.</strong></span> Do you sense a theme from our strategies and tips? The Quads that will win this game mode are the ones that work together, communicate often, and help each other out with sharing loot and cleaning up downed enemies. Play together, win together – it’s that simple.</p><br><br><br>
+        
+                <p><i id="like" onclick="like3()" class="fas fa-thumbs-up"></i></p>
+                <p id="result"></p>
+            
+            </div>  
+            <a href="darksoul.html" ><button id="next" id="next">Next</div></a>    
+            </div>
+        
+            </div>
+            
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

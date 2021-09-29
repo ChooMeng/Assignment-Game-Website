@@ -1,0 +1,109 @@
+/*General*/
+section{
+    padding-top:15px;
+    height: 100%;
+    padding-bottom: 50px;
+    background-image: url("../Media/creditcard-background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+section h1{
+    text-align:center;
+    margin: 15px 0px;
+    color: rgb(59, 241, 241);
+    text-shadow:2px 2px rgb(0, 101, 253);
+    font-family: cursive;
+    font-size:36px;
+}
+
+section table{
+    margin:auto;
+    width: 80%;
+}
+
+section tr td{
+    width: 45%;
+    height:auto;
+}
+
+section fieldset{
+    border:none;
+}
+section legend{
+    font-weight:bold;
+    font-size: 1.3em;
+    text-decoration:underline;
+}
+.userInfo,.cardInfo{
+    margin: auto;
+    background-color: rgb(0, 153, 255);
+    padding: 20px 30px 20px 30px;
+    border-radius: 2%;
+}
+fieldset>input[type=text],fieldset>input[type=email],fieldset>input[type=tel] {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    float: left;
+    padding: 12px;
+}
+  
+label {
+    margin-bottom: 10px;
+    display: block;
+    font-weight:bold;
+}
+
+.address .sub{
+    display:inline-block;
+    width:150px;
+}
+.address .sub label{
+    width:60%;
+}
+.address .sub input{
+    width:80%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 12px;
+}
+.address .sub select{
+    width:98%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 12px;
+}
+.icon {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+#asterik::before{
+    color:red;
+    content: "*";
+}
+#submit{
+    text-align:center;
+    width:100%;
+}
+#submit input{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 30px;
+    border: none;
+    width: 300px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 17px;
+}
+#submit input:hover{
+    background-color: #45a049;
+}

@@ -1,0 +1,389 @@
+@import "animation.css";
+/*General*/
+section{
+    font-size:12px;
+    padding-bottom: 15px;
+    background-image: url("../Media/background.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    margin: auto;
+}
+.gameTypeSideBar{
+    margin:0px;
+    padding:0px;
+    float:right;
+    font-size:30px;
+    width:20%;
+}
+#title{
+    color: rgb(48, 212, 212);
+    letter-spacing: 2px;
+    text-shadow:2px 2px rgb(0, 101, 253);
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    font-family: cursive;
+    font-size:36px;
+    width:80%;
+}
+.main{
+    display:table;
+    width:80%;
+    margin:auto;
+}
+.gameTypeSideBar >a{
+    font-size:18px;
+    font-weight:bold;
+    max-width:200px;
+    min-width:50px;
+    padding:5px 10px 0px;
+    margin: 10px 15px;
+    display:block;
+    border: 1.5px solid cyan;
+    background-color:rgb(0, 153, 255);
+    border-radius:8px;
+    font-style:italic;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    text-decoration:none;
+}
+.gameTypeSideBar >a.active{
+    background-color:#dfe766;
+    border:1.5px solid rgb(255, 251, 0);
+    color:black;
+}
+.gameTypeSideBar >a:hover:not(.active){
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgb(66, 149, 204);
+    cursor:pointer;
+}
+.gameTypeSideBar > a:visited,.gameTypeSideBar > a:link,.gameTypeSideBar > a:focus,.gameTypeSideBar > a:hover{
+    color:black;
+}
+/*Type of the items*/
+#itemsType{
+    width:80%;
+    overflow:hidden;
+    text-align:center;
+    text-decoration:none;
+}
+#itemsType >a{
+    font-size:18px;
+    font-weight:bold;
+    max-width:200px;
+    min-width:50px;
+    padding:5px 10px 0px;
+    display:inline-block;
+    border: 1.5px solid cyan;
+    background-color:rgb(0, 153, 255);
+    border-radius:8px;
+    font-style:italic;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    text-decoration:none;
+}
+
+#itemsType >a:hover{
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgb(21, 143, 224);
+    cursor:pointer;
+}
+
+#itemsType a:last-of-type{
+    margin-top:15px;
+}
+
+/*List of the games*/
+.itemsList{
+    width:80%;
+}
+/*Search Bar*/
+.bar{
+    margin: 10px 0px;
+    padding: 10px;
+    text-align:center;
+    background-color: #5270abf3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.searchBar{
+    text-align:left;
+    border: 3px solid #ddd;
+    padding: 0px 10px;
+    margin-left: -3px;
+    height: 30px;
+    width:80%;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#searchIcon{
+    font-size:16px;
+    background-color: rgb(207, 204, 204);
+    border: 3px solid rgb(207, 204, 204);
+    border-right:none;
+    padding: 5.5px 10px 8.5px;
+}
+/*Items List*/
+.itemsList .itemSlot {
+    margin-top: 10px;
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgba(0,153,255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 100px;
+    overflow:hidden;
+}
+.itemsList .itemSlot:hover{
+    cursor:pointer;
+    background-color: #dfe766;
+    border:1.5px solid rgb(255, 251, 0);
+    
+}
+.itemsList .itemSlot a >#logo{
+    padding: 10px 1% 10px;
+    width:20%;
+    height:auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align:center;
+}
+.itemsList .itemSlot a .contents{
+    margin:0px;
+    width:76.5%;
+    float:right;
+    padding:0px;
+}
+.itemsList .itemSlot a .contents > h1{
+    text-align:left;
+    color:black;
+    font: italic bold 20px Roboto;
+}
+.itemsList .itemSlot a .contents > p{
+    text-decoration:none;
+    font-size:16px;
+    font: 16px 'Times News Roman';
+    text-align:justify;
+    padding-right:30px;
+    color: black;
+    margin:0px;
+}
+.itemsList .itemSlot a .contents > img{
+    position:static;
+    width:64px;
+    height:64px;
+    float:right;
+}
+
+.itemsList .itemSlot:hover a .contents > img{
+    filter: grayscale(60%);
+}
+
+#SMG{
+    display:none;
+}
+#SG{
+    display:none;
+}
+#LMG{
+    display:none;
+}
+#SR{
+    display:none;
+}
+#HG{
+    display:none;
+}
+#Kronos{
+    display:none;
+}
+#Pegasos{
+    display:none;
+}
+#Sphinx{
+    display:none;
+}
+#Underworld{
+    display:none;
+}
+.itemsList .itemSlot{
+    animation: floatInBottom 0.5s ease;
+    -webkit-animation: floatInBottom 0.5s ease;
+}
+
+/*Info of each item*/
+.itemSummary{
+    display:flex;
+    position:absolute;
+    font-size:20px;
+    left:76%;
+    display:none;
+    width:12.5%;
+    background-color: rgb(99, 240, 111);
+    border:1.5px solid rgb(2, 206, 19);
+    padding:5px;
+    border-radius: 10px;
+}
+.itemSlot:hover .itemSummary:hover{
+    display:inline;
+}
+.itemSlot:hover .itemSummary{
+    display:inline;
+}
+.itemSummary p{
+    margin:0px;
+}
+
+/*Price*/
+.itemsList .itemSlot a .contents> .price{
+    padding: 10px;
+    width: auto;
+    display:block;
+    height: auto;
+    float:right;
+    font-size:20px;
+    text-align: center;
+    margin: 2px 15px 5px;
+    color: white;
+    font-style:italic;
+    border-radius:50%;
+    box-shadow: 2px 1.5px rgb(100, 15, 15);
+    background-color: rgb(177, 36, 36);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.itemsList .itemSlot a .contents .price #normal> #coins{
+    width: 32px;
+    height: 32px;
+    margin-bottom: -9px;
+}
+
+/*Add to Cart*/
+.itemsList .itemSlot a .contents> .button{
+    padding: 10px;
+    width: auto;
+    display:block;
+    height: auto;
+    float:right;
+    font-size:20px;
+    text-align: center;
+    margin: 2px 15px 5px;
+    color: white;
+    font-style:italic;
+    border-radius:50%;
+    box-shadow: 2px 2px rgb(12, 80, 92);
+    background-color: rgb(39, 136, 153);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button:hover{
+    border: 1.5px solid rgb(12, 80, 92);
+    background-color:rgb(12, 80, 92);
+    cursor:pointer;
+}
+
+/*Succesful Add to Cart Modal Box*/
+#addBox{
+    top:0;
+    left:0;
+    position:fixed;
+    z-index:2;
+    overflow:auto;
+    height:100%;
+    width:100%;
+    padding-top:100px;
+    background-color: rgb(0,0,0,0.4);
+    display:none;
+}
+#addBox .contents{
+    position:relative;
+    width:40%;
+    margin: 0px auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgba(0,153,255);
+    padding: 0px;
+}
+/*Succesful Added to Shopping Cart*/
+#addBox .contents .header{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:black;
+}
+#addBox .contents .body{
+    background-color: rgb(0, 46, 114);
+    padding: 16px;
+}
+#addBox .contents .body #addButton{
+    text-align:center;
+}
+#addBox .contents .body #addButton .continue{
+    display:inline-block;
+    width: 135px;
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgba(0,153,255);
+    padding:10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+#addBox .contents .body #addButton .continue:hover{
+    background-color: #dfe766;
+    border:1.5px solid rgb(255, 251, 0);
+    cursor:pointer;
+}
+#addBox .contents .body #addButton .shopping{
+    display:inline-block;
+    width: 145px;
+    border: 1.5px solid rgba(60, 240, 253, 0.884);
+    background-color:rgba(0,153,255);
+    margin-left:2%;
+    padding:10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+}
+#addBox .contents .body #addButton .shopping:hover{
+    background-color: #dfe766;
+    border:1.5px solid rgb(255, 251, 0);
+    cursor:pointer;
+}
+#addBox .contents .footer{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:white;
+}

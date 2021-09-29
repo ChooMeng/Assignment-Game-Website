@@ -1,0 +1,132 @@
+@charset "utf-8";
+* { text-decoration: none;}
+/*Introduce section*/
+body { 
+    background-image: url("../Media/about.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+section {
+    text-indent: 50px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:10px;
+    margin-bottom:0px;
+}
+blockquote {
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    border: white solid 10px;
+    line-height: 1.3;
+}
+
+#gif {
+    float: right;
+    width: 500px; 
+    height: 300px;
+    margin-top:8%;
+    margin-right:1%;
+}
+@media screen and (max-width: 1000px) {
+    #gif{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 610px) {
+    #gif{
+        width: 90%;
+        margin-right: 5%;
+        margin-top: 5px;
+    }
+}
+
+
+/*Table section*/
+table#introduce { 
+    margin: 40px;
+    cursor: default;
+}
+table#introduce blockquote {
+    padding: 20px;
+    background-color: turquoise;
+}
+
+table#xxx_intro {
+    margin: auto;
+    font-family: Arial, Roboto;
+    border-style: none;
+    border-width: thin;
+    border-radius: 25px;
+    content: attr("href");
+    vertical-align: text-top;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+
+/*Change color section*/
+#news, #news:visited {
+    background-color: rgba(64, 226, 160,0.5);
+}
+#games, #games:visited {
+    background-color: rgba(255, 102, 102,0.5)
+}
+#market, #market:visited {
+    background-color: rgba(124, 178, 232,0.5);
+}
+#purchase, #purchase:visited {
+    background-color: rgba(255, 105, 248,0.5);
+}
+
+#news:hover, #news:active { background-color: rgb(64, 226, 160); }
+#games:hover,#games:active { background-color: rgb(255, 102, 102); }
+#market:hover, #market:active { background-color: rgb(124, 178, 232); }
+#purchase:hover, #purchase:active { background-color: rgb(255, 105, 248); } 
+
+.cells{ 
+    width: 50%;
+    height: 50%;
+    margin: 30px; 
+}
+
+/*Cell border radius*/
+td#news { border-radius: 25px 0px 0px 0px; }
+td#games { border-radius: 0px 25px 0px 0px; }
+td#market { border-radius: 0px 0px 0px 25px; }
+td#purchase { border-radius: 0px 0px 25px 0px; }
+
+table#xxx_intro tr td h1{
+    margin: 0% 0px;
+    padding: 3%;
+    width:100%;
+}
+table#xxx_intro tr td a {
+    display: block;
+    height: auto;
+}
+
+table#xxx_intro tr td a:hover {
+    font-weight: bold;
+}
+
+/*Cells paragraph*/
+
+td p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 1.25;
+    font-weight: bold;
+    padding: 50px;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+a:hover, a:active {
+    color: white;
+}

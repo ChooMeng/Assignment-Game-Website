@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create a new account. - UNFADE</title>
+        <!-- DISCUSS AT WEEK2 THURSDAY-->
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/register.css" type="text/css">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <script src="JavaScript/register.js"></script>
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account active"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a class="active" href="#">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battle Field 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battle Field 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account active"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a class="active" href="#">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section id="register">
+            <div class="newAcc">
+                <form name="signin" action="register.html#sign" method="post" onsubmit="return check();">
+                <h1>SIGN UP NEW ACCOUNT</h1>
+                <p id="name"><i class="fas fa-user"> Username<span style="color: red;">*</span></i></p>
+                 <input type="text" autofocus="autofocus" placeholder="6-12 characters" id="nameRegister" name="nameRegister" required size="12"><br><br>
+            
+            
+                 <p id="name"><i class="fas fa-lock"> Password<span style="color: red;">*</span></i></p>
+                 
+                  <input type="password" id="password" name="password" placeholder="8-16 characters" required><div class="popup" onmouseover="forgotP()" onmouseout="forgotP()"><i class="fas fa-info-circle"></i>
+                    <span class="popuptext" id="forgotP" >Requirement : characters + numerics</span>
+             </div><br><br>
+            
+                 <p id="name"><i class="fas fa-lock"> Confirm Password<span style="color: red;">*</span></i></p>
+                 <input type="password" id="confirmP" name="confirmP" required>
+                 <input type="checkbox" onclick="checkpw()"><span style="color: rgb(86, 59, 92);">Show Password</span><br><br>
+            
+                 <p id="name"><i class="fas fa-birthday-cake"> Date of Birth<span style="color: red;">*</span></i></p>
+                 <input type="date" id="birthDate" name="birthDate" required placeholder="DD-MM-YYYY"><br><br>
+            
+                 <p id="name"><i class="fas fa-envelope"> Email<span style="color: red;">*</span></i></p>
+                 <input type="email" id="email" name="email" required><br><br>
+            
+                 <p id="name"><i class="fas fa-question-circle"> Terms and Conditions</i></p>
+                 <input name="terms" id="agree" value="agree" type="radio" required/>
+                    <label for="agree"><span id="agree" style="color: rgb(245, 48, 113); font-weight:bold">I AGREE with the terms and conditons at listed</label></span>
+                 <div class="terms">
+                    <h3>Terms Of Service</h3>
+                    <p>Effective Date: April 1, 2020</p><br>
+            
+                     <p>This Agreement (“Agreement”) govern the relationship between you and Unfade games, LLC (Unfade) and sets forth the terms of service (“Terms”) for your use of www.freerangegames.com or any subsequent or related URL (“Site”) and any and all related services, games, software, features or functionality made available on, through or with the Site (“Services”). By accessing the Site or using the Services, you accept these terms and agree to comply with any Policies posted from time to time. If you do not accept these Terms, do not access or use the Site or Services.</p>
+            
+                     <h3>1. Your Representations</h3>
+                       <p> You represent (1) that you are over 13 years old and that you have the legal capacity or necessary permission from your parent or guardian to accept these terms, (2) that you are not barred from receiving the Services under the laws of the Malaysia or other applicable jurisdiction.</p>
+                        
+                    <h3>2. Privacy</h3>
+                      <p>  Our Privacy Policy specifically describes how we collect, use and share your personal information and is currently available at www.unfade.com under Privacy Policy.</p>
+            
+                      <h3>3. Changes And Supplemental Policies</h3>
+                    <p>Unfade may adopt and post additional rules, codes, terms and other policies from time to time that you must follow and that are included in this Agreement by reference (“Policies”). We may change our Terms and Policies at any time by posting the changes to the Site. You agree to routinely check for changes. Using the Site or Services after any changes are posted means you have accepted those changes. If any changes unacceptable to you, you should immediately stop using the Site and Services and cancel your account.</p>
+            
+                    <h3>4. Account</h3>
+                    <p>You may be required to create an Account to use certain Services. You are responsible for all activities conducted through your Account. You agree to provide and maintain true and accurate Account information at all times.</p>
+            
+                    <h3>5. Fees And Purchase Terms</h3>
+                    <p>Some Services require payment of a fee. You must have a current and active Account and pay applicable fees using an authorized payment method. If your payment use is subject to use or sales tax, then we may also charge you for any such taxes, in addition to the other fees. ALL FEES ARE PAYABLE IN ADVANCE AND ARE NOT REFUNDABLE IN WHOLE OR IN PART. You must provide current, complete, and accurate payment information at all times. You are responsible for all charges incurred, including applicable taxes, and all purchases made by you or anyone that uses your Account.</p><br>
+            
+                    <p>You may pay fees using any authorized payment methods made available by or through the Site and payment methods may vary. Payments may be processed by authorized third-parties as applicable and you must agree to the terms and conditions applicable to each payment method you choose.</p><br>
+            
+                    <p>Unfade may change its fees and payment methods from time to time. If any change is unacceptable to you, you may cancel your account at any time. We will not refund any fees that have accrued to your account before such cancellation and we will not pro-rate fees for any charges.</p>
+                  </div><br><br>
+            
+                  <input type="submit" value="Register">
+            
+                    </form>
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes for games</title>
+
+    <link rel="stylesheet" href="../CSS/iframe.css">
+    <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+    <script src="../JavaScript/iframe.js"></script>
+    <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+</head>
+<body onload="maxSlide(), slideShow()">
+    <div class="slideSection">
+        <div class="slideshow">
+          <!--Left button-->
+          <div id="back" class="slideIcon" onclick="changeSlide(-1)"><i class="fas fa-caret-left"></i></div>
+
+          <!--Img list-->
+            <!--
+                Original image size = 460 * 215
+                Current image size 690 * 322.5
+            -->
+            <!--RPG list-->
+            <a href="../GameDetails/Borderlands2/Borderlands2.html" id="borderlands2" target="_blank">
+                <img src="../Media/MainPage/borderlands2.jpg" alt="Borderlands 2"style="display:block" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html" id="acOdyssey" target="_blank">
+                <img src="../Media/MainPage/acOdyssey.jpg" alt="Assassin's Creed Odyssey" style="display:none" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/Undertale/Undertale.html" id="undertale" target="_blank">
+                <img src="../Media/MainPage/undertale.jpg" alt="Undertale" style="display:none" class="fadeInSlide">
+            </a>
+            <!--FPS list-->
+            <a href="../GameDetails/CallofDuty/CallofDuty.html" id="cod" target="_blank">
+                <img src="../Media/MainPage/callofduty.jpg" alt="Call Of Duty" style="display:none" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/Bulletstorm/Bulletstorm.html" id="bulletstorm" target="_blank">
+                <img src="../Media/MainPage/bulletstorm.jpg" alt="Bulletstorm" style="display:none" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/Prodeus/Prodeus.html" id="prodeus" target="_blank">
+                <img src="../Media/MainPage/prodeus.jpg" alt="Prodeus" style="display:none" class="fadeInSlide">
+            </a>
+            <!--Horror List-->
+            <a href="../GameDetails/Outlast/Outlast.html" id="outlast" target="_blank">
+                <img src="../Media/MainPage/outlast.jpg" alt="Outlast" style="display:none" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/Left4Dead2/Left4Dead2.html" id="l4d2" target="_blank">
+                <img src="../Media/MainPage/l4d2.jpg" alt="Left 4 Dead 2" style="display:none" class="fadeInSlide">
+            </a>
+            <a href="../GameDetails/ParanormalHK/ParanormalHK.html" id="paranormalHk" target="_blank">
+                <img src="../Media/MainPage/pararnormal_hk.jpg" alt="Paranormal Hk" style="display:none" class="fadeInSlide">
+            </a>
+
+            <!--Right button-->
+            <div id="next" class="slideIcon" onclick="changeSlide(1)"><i class="fas fa-caret-right"></i></div>
+        </div>
+        
+    </div>
+
+
+</body>
+</html>

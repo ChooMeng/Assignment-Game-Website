@@ -1,0 +1,104 @@
+/* Zoom Animation */
+@keyframes zoom{
+    from{transform: scale(0);}
+    to{transform: scale(1);}
+}
+@-webkit-keyframes zoom{
+    from{-webkit-transform: scale(0);}
+    to{-webkit-transform: scale(1);}
+}
+@-o-keyframes zoom{
+    from{-o-transform: scale(0);}
+    to{-o-transform: scale(1);}
+}
+@-moz-keyframes zoom{
+    from{-moz-transform: scale(0);}
+    to{-moz-transform: scale(1);}
+}
+
+/* Fade in */
+@keyframes fadeIn{
+    0% {
+        opacity:0.4;
+    }
+    100% {
+    opacity:1;
+    }
+}
+@-webkit-keyframes fadeIn{
+    0% {
+        opacity:0.4;
+    }
+    100% {
+    opacity:1;
+    }
+}
+@-o-keyframes fadeIn{
+    0% {
+        opacity:0.4;
+    }
+    100% {
+    opacity:1;
+    }
+}
+@-moz-keyframes fadeIn{
+    0% {
+        opacity:0.4;
+    }
+    100% {
+    opacity:1;
+    }
+}
+
+/* Fade out */
+@keyframes fadeOut{
+    0% {
+        opacity:1;
+    }
+    100% {
+    opacity:0;
+    }
+}
+@-webkit-keyframes fadeOut{
+    0% {
+        opacity:1;
+    }
+    100% {
+    opacity:0;
+    }
+}
+@-o-keyframes fadeOut{
+    0% {
+        opacity:1;
+    }
+    100% {
+    opacity:0;
+    }
+}
+@-moz-keyframes fadeOut{
+    0% {
+        opacity:1;
+    }
+    100% {
+    opacity:0;
+    }
+}
+
+/* Spinning */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-o-keyframes spin{
+    0% { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); }
+}
+@-moz-keyframes spin{
+    0% { -o-transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); }
+}

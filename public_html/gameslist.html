@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+    <head >
+        <title>Games List - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/gameslist.css" type="text/css">
+        <script src="JavaScript/gameslist.js"></script>
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="setColor(),cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="shoppingCart" onclick="location.href='shoppingcart.html'">
+            <p><i class="fas fa-shopping-cart"></i><span class="notification">11</span></p>
+        </button>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="#" class="active" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a href="register.html#register">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game active"><a href="#" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a href="register.html#register">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <section>
+            <div class="main">
+                <h2 id="title">Games</h2>
+                <div id="gamesType">
+                    <div>
+                        <a onclick="changeType(1)" id="typeRPG" >
+                            <img src="Media/rpgicon.png" width="22px" height="22px"> Role-Playing Games
+                        </a>
+                        
+                    </div>
+                    <div>
+                        <a onclick="changeType(2)" id="typeFPS">
+                            <i class="fas fa-bullseye"></i> First-Person Shooting
+                        </a>
+                    </div>
+                    <div>
+                        <a onclick="changeType(3)" id="typeHorror">
+                            <i class="fas fa-ghost"></i> Horror
+                        </a>
+                    </div>
+                    
+                </div>
+                <aside>
+                    <div class="TopRPG">
+                        <div id="rank">
+                            <h1>TOP RPG</h1>
+                            <p><span class="Top1">1</span> Borderlands 2</p>
+                            <p><span class="Top2">2</span> Assassin’s Creed Odyssey</p>
+                            <p><span class="Top3">3</span> Undertale</p>
+                            <p><span class="Top4">4</span> Bloodborne</p>
+                            <p><span class="Top5">5</span> Dark Souls 3</p>
+                        </div>
+                    </div>
+                    <div class="TopFPS">
+                        <div id="rank">
+                            <h1>TOP FPS</h1>
+                            <p><span class="Top1">1</span> Call of Duty</p>
+                            <p><span class="Top2">2</span> Bulletstorm</p>
+                            <p><span class="Top3">3</span> Prodeus</p>
+                            <p><span class="Top4">4</span> Battlefield 3</p>
+                            <p><span class="Top5">5</span> UberStrike</p>
+                        </div>
+                    </div>
+                    <div class="TopHorror">
+                        <div id="rank">
+                            <h1>TOP HORROR</h1>
+                            <p><span class="Top1">1</span> Outlast</p>
+                            <p><span class="Top2">2</span> A-Tech Cybernetic VR</p>
+                            <p><span class="Top3">3</span> Left 4 Dead 2</p>
+                            <p><span class="Top4">4</span> Paranormal HK</p>
+                            <p><span class="Top5">5</span> Half Life</p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="gamesList" id="rpg">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarRpg" onkeyup="searchGame(0)" placeholder="Search for role playing games" title="Type in games name">
+                    </div>
+                    <div class="rpgList">
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 5/7/2019</p>
+                                <p id="date">Updated: 18/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:25%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Undertale/Undertale.html">
+                                <img id="logo" src="Media/Games/undertale.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Undertale</span> <span class="version">5.0</span></h1>
+                                    <p>The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magic barrier. The player meets various monsters during the journey back to the surface. Some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.</p>
+                                    <div class="price">
+                                        <span id="normal">Free</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 6/3/2018</p>
+                                <p id="date">Updated: 2/4/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:23%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">
+                                <img id="logo" src="Media/Games/Bloodborne.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Bloodborne</span> <span class="version">6.2</span></h1>
+                                    <p> Bloodborne follows the player's character, a Hunter, through the decrepit Gothic, Victorian era-inspired city of Yharnam, whose inhabitants have been afflicted with an abnormal blood-borne disease. Ultimately attempting to find the source of the plague, the player's character unravels the city's intriguing mysteries while fighting beasts.</p>
+                                    <div class="price">
+                                        <span id="normal">1250<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 13/2/2019</p>
+                                <p id="date">Updated: 3/4/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:19%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">
+                                <img id="logo" src="Media/Games/darksoul.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Dark Souls 3</span> <span class="version">7.3</span></h1>
+                                    <p>Action-RPG doesn’t get much more action-y than Dark Souls 3. Wield whatever weapon you like, deck yourself in the armour, and go to town on the creatures standing in your way. New shield and weapon skills bulk out how much you can tweak your combat, letting you unleash special attacks and delve even more into the character-building side of things. Encouraging exploration through its intertwined map, shortcuts and alternate routes that were invisible on your first every single fight will keep you on your toes and - more importantly - switching out weapons to suit the next abomination you’ll be facing. You might not see the Ashen One’s face a whole lot, but who needs words when you’ve got to fight off hordes of bloodthirsty monsters? </p>
+                                    <div class="price">
+                                        <span id="discountBox">-22%</span><span id="discount">1740<img src="Media/Ucoins.png" id="uCoins"></span>
+                                        <br>
+                                        <span id="normal">1450<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 28/7/2019</p>
+                                <p id="date">Updated: 28/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:33%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">
+                                <img id="logo" src="Media/Games/borderlands.jpg">
+                                <div class="contents">
+                                    <img src="Media/rating.svg">
+                                    <h1><span class="nameOfGame">Borderlands 2</span> <span class="version">5.3</span></h1>
+                                    <p>There’s so much you can say with the gun you have holstered at your hip. Sniper rifle? You’re probably the planning type. Shotgun? Getting up close and personal sounds like your cup of tea. Dual wielding a combat rifle and a revolver? Err...you’re definitely a Gunzerker. it might sound bonkers, but Borderlands 2 encourages this type of chaotic shenanigans, and hopefully Borderlands 3 will too. Sidequests from the ridiculous inhabitants of its world range from healing a wounded Skag pup to shooting Shooty McFace in the face, and as you level up your class skill tree you’ll soon find even Handsome Jack quaking in his boots. Joking. That arrogant douchebag is your enemy for a reason, after all.</p>
+                                    <div class="price">
+                                        <span id="normal">1900<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 27/3/2020</p>
+                                <p id="date">Updated: 27/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:28%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">
+                                <img id="logo" src="Media/Games/Assassin’sCreedOdyssey.jpg">
+                                <div class="contents">
+                                    <img src="Media/New-icon.png">
+                                    <img src="Media/rating.svg">
+                                    <h1><span class="nameOfGame">Assassin’s Creed Odyssey</span> <span class="version">1.0</span></h1>
+                                    <p>Assassin’s Creed Odyssey as for the first time you have NPCs to romance (whether you want to be a Casanova or as chaste as a saint), and dialogue options. Then combine those brand new features with the return of naval combat and enough sidequests, locations, and hidden secrets to keep you busy for days and you've got Odyssey. Your misthios (mercenary) Alexios or Kassandra is truly yours to shape however you wish. With nine endings to unlock, the way you end specific quests will end up having an impact on the world around you whether that’s for the better or worse. You know what that means? Multiple playthroughs. If you dare, of course, as you will be kept busy for over 100 hours if you choose to explore everywhere and do everything (and everyone). After this RPG, Assassin’s Creed is never going to be the same again. </p>
+                                    <div class="price">
+                                        <span id="normal">2450<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="emptySlot">
+                            <h1>No game match the search criteria</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gamesList" id="fps">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarFps" onkeyup="searchGame(1)" placeholder="Search for first person shooting" title="Type in games name">
+                    </div>
+                    <div class="fpsList">
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 14/4/2019</p>
+                                <p id="date">Updated: 12/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:35%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">
+                                <img id="logo" src="Media/Games/callofduty.jpg">
+                                <div class="contents">
+                                    <img src="Media/rating.svg">
+                                    <h1><span class="nameOfGame">Call of Duty</span> <span class="version">4.3</span></h1>
+                                    <p>Call of Duty began as WW2-era shooter focused on recreating the tense drama of war. Since then, we've had CoD games set during the Cold War, Vietnam War, modern day, even the far future and outer space. Black Ops 3 is the current Goldilocks of the CoD legacy, which is to say it sits somewhere in the middle and manages to feel juuuust right. Not too futuristic, not too held back by the past, Black Ops 3 infuses smart design with fluid gameplay to create something that feels unique and powerful without straying too far from its roots. Choosing a specific character gives competitive multiplayer a slight MOBA feel, while the campaign re-introduces four-player co-op to the series. And of course, let's not forget our undead friends lurking in the Zombies mode, which gets an entire city in Black Ops 3.</p>
+                                    <div class="price">
+                                        <span id="normal">1600<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 2/4/2020</p>
+                                <p id="date">Updated: 5/4/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:24%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Prodeus/Prodeus.html">
+                                <img id="logo" src="Media/Games/prodeus.jpg">
+                                <div class="contents">
+                                    <img src="Media/New-icon.png">
+                                    <h1><span class="nameOfGame">Prodeus</span> <span class="version">1.1</span></h1>
+                                    <p>The developers describe Prodeus as "the first-person shooter of old, re-imagined using modern rendering techniques." The gameplay resembles that of classic 1990s first-person shooters such as Doom and Quake. The player must explore complex levels, sometimes searching out keys to progress, while engaging enemies in fast-paced combat using a variety of weapons. To help the player find their way, and to aid in discovering secrets, the game features an automap similar in function to those featured in games such as Doom, Duke Nukem 3D, and Metroid Prime.</p>
+                                    <div class="price">
+                                        <span id="normal">1700<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 13/2/2019</p>
+                                <p id="date">Updated: 9/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:26%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">
+                                <img id="logo" src="Media/Games/bulletstorm.jpg">
+                                <div class="contents">
+                                    <img src="Media/rating.svg">
+                                    <h1><span class="nameOfGame">Bulletstorm</span> <span class="version">3.6</span></h1>
+                                    <p>It's the Skillshots that do it. A vast, stacking, interconnecting roster of named killing methods (which cover everything from shooting an enemy in the balls to lassoing him and then kicking him into a murderous plant), that can be comboed near-endlessly, to create gloriously brutal takedowns. Extravagant kills mean more points, and more points mean more ammo to kill with. But more than anything, it's all a hilariously gratifying, ceaselessly rewarding, creative challenge in itself. You really don't know how fun a shooter can be until you've whipped a goon into the air, shot him up the ass, and then slid underneath to knock him out of the air with a shotgun, raining whatever's left upon the spikes below. </p>
+                                    <div class="price">
+                                        <span id="normal">2250<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 28/6/2018</p>
+                                <p id="date">Updated: 28/12/2019</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:21%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/UberStrike/UberStrike.html">
+                                <img id="logo" src="Media/Games/uberstrike.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">UberStrike</span> <span class="version">17.1</span></h1>
+                                    <p>Uberstrike varies from Paradise Paintball in many ways. Some of the most recognized changes are the 'loss of paintball', which allowed for the inclusion of many more weapons (Some of which cost points, which can be earned by playing the game, and some of which cost credits, a form of currency that can only be bought using real-life currency), Another major change was in the gameplay itself- armor was introduced as a 'Armor Point Count' that constantly drained away but could be replenished using nearby respawning shields or buying a steady armor base with credits. </p>
+                                    <div class="price">
+                                        <span id="normal">Free</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 2/5/2019</p>
+                                <p id="date">Updated: 27/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:23%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/BattleField3/BattleField3.html">
+                                <img id="logo" src="Media/Games/battlefield.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Battlefield 3</span> <span class="version">5.8</span></h1>
+                                    <p>Playing host to some of the most beautifully designed multiplayer maps ever, there’s nothing quite like throwing yourself into the cacophony of grenades trying to storm the subway station during a Rush match on Metro. The grand vistas of Caspian Border set a dramatic backdrop for players to test their skills in a jet cockpit or behind the wheel of a lumbering tank. Deathmatch on Noshahr Canals is a quintessential test of quick thinking and quick hands. And the Close Quarters DLC maps may have shrunk the size, but the intensity of defending control points in Ziba Tower is unmatched.</p>
+                                    <div class="price">
+                                        <span id="discountBox">-31%</span><span id="discount">1048<img src="Media/Ucoins.png" id="uCoins"></span>
+                                        <br>
+                                        <span id="normal">800<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="emptySlot">
+                            <h1>No game match the search criteria</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="gamesList" id="horror">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarHorror" onkeyup="searchGame(2)" placeholder="Search for horror games" title="Type in games name">
+                    </div>
+                    <div class="horrorList">
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 10/8/2019</p>
+                                <p id="date">Updated: 12/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:20%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">
+                                <img id="logo" src="Media/Games/Paranormal_hk.png">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Paranormal HK</span> <span class="version">2.4</span></h1>
+                                    <p>Paranormal HK is a first person horror game about Urban legends of Hong Kong, China. The story is about a crew of online supernatural channel“Beyond the Invisible” went to Kowloon Walled City to film a short movie for their latest episode and encountered something out of their expectations.</p>
+                                    <div class="price">
+                                        <span id="normal">700<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 6/5/2018</p>
+                                <p id="date">Updated: 19/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:30%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Outlast/Outlast.html">
+                                <img id="logo" src="Media/Games/outlast.jpg">
+                                <div class="contents">
+                                    <img src="Media/rating.svg">
+                                    <h1><span class="nameOfGame">Outlast</span> <span class="version">13.4</span></h1>
+                                    <p>Outlast is a first-person survival horror video game developed and published by Red Barrels. The game revolves around a freelance investigative journalist, Miles Upshur, who decides to investigate a remote psychiatric hospital named Mount Massive Asylum, located deep in the mountains of Lake County, Colorado. The downloadable content, Outlast: Whistleblower, centers on Waylon Park, the man who led Miles there in the first place.</p>
+                                    <div class="price">
+                                        <span id="normal">3300<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 10/3/2019</p>
+                                <p id="date">Updated: 9/2/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:16%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/HalfLife/HalfLife.html">
+                                <img id="logo" src="Media/Games/Half-Life.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Half Life</span> <span class="version">2.8</span></h1>
+                                    <p>Half-Life: Alyx is a virtual reality (VR) game to allow it to be played without VR equipment, adding that Valve was curious to see how players would react to this version. Tyler McVicker of Valve News Network discovered a pre-release build of the game mistakenly leaked on Steam that included non-VR developer tools, allowing interactions such as picking up objects and firing weapons. However, most of the game's basic interactions such as pressing buttons or filling Alyx's backpack could not be completed with the "use" key. McVicker concluded that unless a modder found a way to completely change how the player's actions affected the game world, it was impossible to play the entire game with a non-VR control scheme.</p>
+                                    <div class="price">
+                                        <span id="normal">3150<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 28/3/2020</p>
+                                <p id="date">Updated: 1/4/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:28%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">
+                                <img id="logo" src="Media/Games/A-TechCyberneticVR.jpg">
+                                <div class="contents">
+                                    
+                                    <img src="Media/New-icon.png">
+                                    <h1><span class="nameOfGame">A-Tech Cybernetic VR</span> <span class="version">1.1</span></h1>
+                                    <p>A-Tech Cybernetic is a first-person shooter built from the ground up for VR. It features two separate game modes: a classic swarm mode to put your shooting and survival skills to the test and a story mode that takes you to a futuristic biomedical company overrun by mutants.</p>
+                                    <div class="price">
+                                        <span id="discountBox">-43%</span><span id="discount">1144<img src="Media/Ucoins.png" id="uCoins"></span>
+                                        <br>
+                                        <span id="normal">800<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gameSlot">
+                            <div class="gameSummary">
+                                <p id="date">Released: 18/4/2019</p>
+                                <p id="date">Updated: 24/3/2020</p>
+                                <div id="rating">
+                                    <p>User Rating:</p>
+                                    <div id="empty">
+                                        <span id="star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                    <div id="fill" style="width:25%">
+                                        <span id="star" class="checked-star">
+                                            ★★★★★
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">
+                                <img id="logo" src="Media/Games/Left4Dead2.jpg">
+                                <div class="contents">
+                                    <h1><span class="nameOfGame">Left 4 Dead 2</span> <span class="version">8.4</span></h1>
+                                    <p>
+                                        Left 4 Dead 2 builds upon cooperatively focused gameplay and Valve's proprietary Source engine, the same game engine used in the original Left 4 Dead. Set during the aftermath of an apocalyptic pandemic, Left 4 Dead 2 focuses on four new Survivors, fighting against hordes of zombies, known as the Infected, who develop severe psychosis and act extremely aggressive. The Survivors must fight their way through five campaigns, interspersed with safe houses that act as checkpoints, with the goal of escape at each campaign's finale. The gameplay is procedurally altered by the "AI Director 2.0", which monitors the players' performance and adjusts the scenario to provide a dynamic challenge. Other new features include new types of special infected and an arsenal of melee weapons.</p>
+                                    <div class="price">
+                                        <span id="discountBox">-45%</span><span id="discount">1235<img src="Media/Ucoins.png" id="uCoins"></span>
+                                        <br>
+                                        <span id="normal">850<img src="Media/Ucoins.png" id="uCoins"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="emptySlot">
+                            <h1>No game match the search criteria</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+                Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

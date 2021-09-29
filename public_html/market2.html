@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MarketPlace - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/market.css" type="text/css">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+        <script src="JavaScript/market.js"></script>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="shoppingCart" onclick="location.href='shoppingcart.html'">
+            <p><i class="fas fa-shopping-cart"></i><span class="notification">11</span></p>
+        </button>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a class="active" href="#" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a href="register.html#register">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="active"><a href="#" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a href="register.html#register">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <div class="main">
+                <h2 id="title">Assassin's Creed Odyssey</h2>
+                
+                <div id="itemsType">
+                    <a onclick="itemType(2,1)" id="typeIkaros" style="border:1.5px solid rgba(243, 234, 101, 0.904);background-color:#d7d870;">
+                        Ikaros Pack
+                    </a>
+                    <a onclick="itemType(2,2)" id="typeKronos">
+                        Kronos Pack
+                    </a>
+                    <a onclick="itemType(2,3)" id="typePegasos">
+                        Pegasos Mythical Pack
+                    </a>
+                    <a onclick="itemType(2,4)" id="typeSphinx">
+                        Sphinx Pack
+                    </a>
+                    <a onclick="itemType(2,5)" id="typeUnderworld">
+                        Underworld Mythical Pack
+                    </a>
+                </div>
+                <div class="gameTypeSideBar">
+                    <a href="market.html">Call of Duty</a>
+                    <a class="active" href="#">Assassins Creed Odessey</a>
+                </div>
+                <div id="addBox">
+                    <div class="contents">
+                        <div class="header">
+                            Succesful Added to Shopping Cart
+                        </div>
+                        <div class="body">
+                            <div id="addButton">
+                                <div class="continue" onclick="closeBox()">Continue Shopping</div>
+                                <div class="shopping" onclick="location.href='shoppingcart.html'">Go to Shopping Cart</div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                        </div>
+                    </div>
+                </div>
+                <div class="itemsList" id="Ikaros">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarIkaros" onkeyup="searchItems(2,1)" placeholder="Search for Assassins Creed Odyssey items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Waist Armor</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+50% Headshot Damage</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Eagle_Belt.png">
+                            <div class="contents">
+                                <h1 id="eagleWaist"><span class="nameOfItem">Eagle Belt</span></h1>
+                                <p>Inspired by the eagles and specifically Ikaros, the belt was made available to Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Arm Armor</p><br>
+                          <p id="stats">+25% Hunter Damage<br>
+                                    <br>+50% Adrenaline on Headshot Kill</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Eagle_Bracers.png">
+                          <div class="contents">
+                              <h1 id="eagleArm"><span class="nameOfItem">Eagle Bracers</span></h1>
+                              <p>Inspired by Ikaros, great eagle and companion to Spartan misthios Kassandra, the crown was made available to the Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories in 2018.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                              </div>
+                              <div class="price">
+                                <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Torso Armor</p><br>
+                          <p id="stats">+25% Hunter Damage<br>
+                                   <br>+50% Elemental Buildup</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Eagle_Harness.png">
+                          <div class="contents">
+                              <h1 id="eagleTorso"><span class="nameOfItem">Eagle Harness</span></h1>
+                              <p>Inspired by eagles and specifically Ikaros, the harness was made to be incredibly light and flexible, giving the impression that it was meant to be worn in the skies. It was made available to Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                              </div>
+                              <div class="price">
+                                <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Headgear</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+50% CRIT Damage</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Eagle_Mask.png">
+                            <div class="contents">
+                                <h1 id="eagleHead"><span class="nameOfItem">Eagle Mask</span></h1>
+                                <p>Inspired by eagles and specifically Ikaros, the mask was designed to cover all facial features of the wearer, giving it a feathered and fierce appearance. It was made available to Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Leg Armor</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+20% Damage with Bow Charged Shot</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Eagle_Wrappings.png">
+                            <div class="contents">
+                                <h1 id="eagleLeg"><span class="nameOfItem">Eagle Wrappings</span></h1>
+                                <p>Inspired by eagles and specifically Ikaros, the wrappings were favored by athletes and messengers due to its comfort and flexibility, and they were made available to Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Weapon</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+10% CRIT Chance<br>
+                                      <br>+25% CRIT Chance with Rain of Destruction Ability</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Ikaros/ACOD_Petomai.png">
+                            <div class="contents">
+                                <h1 id="eagleWeapon"><span class="nameOfItem">Petomai</span></h1>
+                                <p>The bow was made available to the Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Kronos-->
+                <div class="itemsList" id="Kronos">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarKronos" onkeyup="searchItems(2,2)" placeholder="Search for Assassins Creed Odyssey items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Waist Armor</p><br>
+                            <p id="stats">+20% Warrior Damage<br>
+                                     <br>+50% Adrenaline per Hit<br>
+                                     <br>+30% Damage on Athenian Soldiers</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_Father_Time.png">
+                            <div class="contents">
+                                <h1 id="kronosWaist"><span class="nameOfItem">Father Time</span></h1>
+                                <p>The belt was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                        <p id="type">Torso Armor</p><br>
+                        <p id="stats">+24% Warrior Damage<br>
+                                  <br>+20% Health<br>
+                                  <br>+60% Total Armor</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_Guard_of_Time.png">
+                          <div class="contents">
+                              <h1 id="kronosTorso"><span class="nameOfItem">Guard of Time</span></h1>
+                              <p>During the Peloponnesian War, the breastplate was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                        <p id="type">Weapon</p><br>
+                        <p id="stats">+30% Warrior Damage<br>
+                                  <br>+50% Damage with Spears<br>
+                                  <br>+20% CRIT Damage</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_The_Harvester_of_Time.png">
+                          <div class="contents">
+                              <h1 id="kronosWeapon"><span class="nameOfItem">The Harvester of Time</span></h1>
+                              <p>During the Peloponnesian War, the spear was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                              </div>
+                              <div class="price">
+                                <span id="normal">2000<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Headgear</p><br>
+                            <p id="stats">+20% Warrior Damage<br>
+                                      <br>+40% Chance to Ignore Half Damage<br>
+                                      <br>+30% All Damage</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_The_Timeless_Eye.png">
+                            <div class="contents">
+                                <h1 id="kronosHead"><span class="nameOfItem">The Timeless Eye</span></h1>
+                                <p>Inspired by and dedicated to the Titan Kronos of the Greek mythology, the helmet was said to have been passed down from warrior to warrior since time immemorial. It was made available to Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Arm Armor</p><br>
+                            <p id="stats">+24% Warrior Damage<br>
+                                      <br>+10% CRIT Chance<br>
+                                      <br>+50% Elemental Buildup</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_Time_27s_Grip.png">
+                            <div class="contents">
+                                <h1 id="kronosArm"><span class="nameOfItem">Time's Grip</span></h1>
+                                <p>During the Peloponnesian War, the gloves were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories in 2018</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Leg Armor</p><br>
+                            <p id="stats">+24% Warrior Damage<br>
+                                      <br>+30% Damage with Spears<br>
+                                      <br>+40% Damage on Spartan Soldiers</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Kronos/ACOD_TImeless_Greaves.png">
+                            <div class="contents">
+                                <h1 id="kronosLeg"><span class="nameOfItem">Timeless Greaves</span></h1>
+                                <p>During the Peloponnesian War, the greaves were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Pegasos-->
+                <div class="itemsList" id="Pegasos">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarPegasos" onkeyup="searchItems(2,3)" placeholder="Search for Assassins Creed Odyssey items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Weapon</p><br>
+                            <p id="stats">+25% Assassin Damage<br>
+                                      <br>+30% Adrenaline per Hit<br>
+                                      <br>+25% Damage after Perfectly Timed Dodge</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_Chrysaor_-_Pierre_Fleau.png">
+                            <div class="contents">
+                                <h1 id="pegasosWeapon"><span class="nameOfItem">Chrysaor</span></h1>
+                                <p>During the Peloponnesian War, the sword was made available to the Spartan misthios Kassandra through an Animus modification made by the Assassin Layla Hassan, who relived her memories in 2018.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Arm Armor</p><br>
+                          <p id="stats">+25% Warrior Damage<br>
+                                    <br>+50% Adrenaline on Assassination Kill</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_Feathered_Bracers.png">
+                          <div class="contents">
+                              <h1 id="pegasosArm"><span class="nameOfItem">Feathered Bracers</span></h1>
+                              <p>The bracers were made available to misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Waist Armor</p><br>
+                            <p id="stats">+30% Warrior Damage<br>
+                                      <br>+50% Adrenaline on Assassination Kill</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_Pegasos_27s_Embrace.png">
+                          <div class="contents">
+                              <h1 id="pegasosWaist"><span class="nameOfItem">Pegasos' Embrace</span></h1>
+                              <p>Inspired by the winged stallion Pegasos of the Greek mythology, the belt was made available to Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Torso Armor</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+40% Movement Speed while Crouching<br>
+                                      <br>+30% Warrior Damage<br>
+                                      <br>+50% Adrenaline on Assassination Kill</p> 
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_Plumage_of_Protection.png">
+                            <div class="contents">
+                                <h1 id="pegasosTorso"><span class="nameOfItem">Plumage of Protection</span></h1>
+                                <p>Inspired by the winged stallion Pegasos of the Greek mythology, the breastplate was made available to Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Headgear</p><br>
+                            <p id="stats">+30% Warrior Damage<br>
+                                      <br>+50% Adrenaline on Assassination Kill</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_The_Peak_of_Pegasos.png">
+                            <div class="contents">
+                                <h1 id="pegasosHead"><span class="nameOfItem">The Peak of Pegasos</span></h1>
+                                <p>The helmet was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Leg Armor</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+40% Movement Speed while Crouching</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Pegasos Mythical/ACOD_Winged_Guardian_s_Greaves.png">
+                            <div class="contents">
+                                <h1 id="pegasosLeg"><span class="nameOfItem">Winged Guardian's Greaves</span></h1>
+                                <p>During the Peloponnesian War, the greaves were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Sphinx-->
+                <div class="itemsList" id="Sphinx">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarSphinx" onkeyup="searchItems(2,4)" placeholder="Search for Assassins Creed Odyssey items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Weapon</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                          <br>+40% Fire Damage<br>
+                                          <br>+50% Elemental Buildup<br>
+                                          <br>-25% Physical Damage</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Sphinx/ACOd-Enigma-FrancoisPhilippeLGauvin.jpg">
+                            <div class="contents">
+                                <h1 id="sphinxWeapon"><span class="nameOfItem">Enigma</span></h1>
+                                <p>The staff was made available to the Spartan misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relived her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Torso Armor</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+20% Damage with Bow Charged Shot</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Sphinx/ACOD_Armor_of_the_Sphinx.png">
+                          <div class="contents">
+                              <h1 id="sphinxTorso"><span class="nameOfItem">Armor of the Sphinx</span></h1>
+                              <p>During the Peloponnesian War, the armor was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Arm Armor</p><br>
+                          <p id="stats">+25% Hunter Damage<br>
+                                    <br>+20% Bow Charging Speed</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Sphinx/ACOD_Arms_of_the_Sphinx.png">
+                          <div class="contents">
+                              <h1 id="sphinxArm"><span class="nameOfItem">Arms of the Sphinx</span></h1>
+                              <p>During the Peloponnesian War, the bracers were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Waist Armor</p><br>
+                            <p id="stats">+35% Hunter Damage<br>
+                                      <br>+50% Bow Charging Speed</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Sphinx/ACOD_Belt_of_the_Sphinx.png">
+                            <div class="contents">
+                                <h1 id="sphinxWaist"><span class="nameOfItem">Belt of the Sphinx</span></h1>
+                                <p>Inspired by the Sphinx of the Greek mythology, the belt was made available to Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Headgear</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+30% Damage with Bows on Distant Targets</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Sphinx/ACOD_Crown_of_the_Sphinx.png">
+                            <div class="contents">
+                                <h1 id="sphinxHead"><span class="nameOfItem">Crown of the Sphinx</span></h1>
+                                <p>During the Peloponnesian War, the headpiece was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Leg Armor</p><br>
+                            <p id="stats">+25% Hunter Damage<br>
+                                      <br>+100% CRIT Damage while Full Health</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Sphinx/ACOD_Greaves_of_the_Sphinx.png">
+                            <div class="contents">
+                                <h1 id="sphinxLeg"><span class="nameOfItem">Greaves of the Sphinx</span></h1>
+                                <p>During the Peloponnesian War, the boots were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Underworld Mythical-->
+                <div class="itemsList" id="Underworld">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarUnderworld" onkeyup="searchItems(2,5)" placeholder="Search for Assassins Creed Odyssey items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Waist Armor</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+20 Seconds Burning Duration</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Belt_of_the_Underworld.png">
+                            <div class="contents">
+                                <h1 id="uwWaist"><span class="nameOfItem">Belt of the Underworld</span></h1>
+                                <p>During the Peloponnesian War, the belt was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories in 2018.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Weapon</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+30% Damage with Spears<br>
+                                      <br>+25% Warrior Damage<br>
+                                      <br>-15% Ranged Resistance</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Bident_of_the_Underworld.png">
+                          <div class="contents">
+                              <h1 id="uwWeapon"><span class="nameOfItem">Bident of the Underworld</span></h1>
+                              <p>During the Peloponnesian War, the bident was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">2000<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                        <p id="type">Arm Armor</p><br>
+                        <p id="stats">+30% Warror Damage<br>
+                                  <br>+50% Adrenaline per Hit</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Bracers_of_the_Underworld.png">
+                          <div class="contents">
+                              <h1 id="uwArm"><span class="nameOfItem">Bracers of the Underworld</span></h1>
+                              <p>During the Peloponnesian War, the bracers were made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                            </div>
+                              <div class="price">
+                                <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Torso Armor</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+10 Seconds Burning Duration</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Chest_Plate_of_the_Underworld.png">
+                            <div class="contents">
+                                <h1 id="uwTorso"><span class="nameOfItem">Chest Plate of the Underworld</span></h1>
+                                <p>During the Peloponnesian War, the breastplate was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Leg Armor</p><br>
+                            <p id="stats">+25% Warrior Damage<br>
+                                      <br>+30% Damage with Spears</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Greaves_of_the_Underworld.png">
+                            <div class="contents">
+                                <h1 id="uwLeg"><span class="nameOfItem">Greaves of the Underworld</span></h1>
+                                <p>Inspired by the Greek god of the underworld Hades, the greaves were made available to Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Headgear</p><br>
+                            <p id="stats">+20% Warrior Damage<br>
+                                      <br>+30% Fire Damage</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/ACOdyssey/Underworld Mythical/ACOD_Helm_of_the_Underworld.png">
+                            <div class="contents">
+                                <h1 id="uwHead"><span class="nameOfItem">Helm of the Underworld</span></h1>
+                                <p>During the Peloponnesian War, the helmet was made available to the misthios Kassandra through an Animus modification by Layla Hassan, an Assassin who relieved her memories in 2018.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

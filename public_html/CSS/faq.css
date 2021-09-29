@@ -1,0 +1,144 @@
+* { font-family: Arial, Helvetica, sans-serif;}
+body { 
+      background-image: url("../Media/faq.gif");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+/*Background Wave*/
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg); 
+  left: 0;
+  z-index: -3;
+}
+
+.wave {
+  position: absolute;
+  opacity: .4;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+
+.wave.-one {
+  animation: rotate 7000ms infinite linear;
+  opacity: .1;
+  background: rgb(255, 102, 102);;
+}
+
+.wave.-two {
+  animation: rotate 3000ms infinite linear;
+  opacity: .1;
+  background: rgb(64, 226, 160);;
+}
+
+.wave.-three {
+  animation: rotate 7500ms infinite linear;
+  background-color: rgb(124, 178, 232);;
+}
+
+/*Section setting*/
+section {
+    font-size: 1.5em;;
+    padding-bottom: 15px;
+    margin: 0px 50px;
+    display: inline;
+  font: bold Roboto;
+}
+
+/*Whole div section*/
+div#whole {
+  margin: 50px;
+  padding: 100px;
+  padding-top: 0px;
+}
+div#whole > pre{
+  margin-bottom: 0px;
+}
+/*List*/
+section ul {
+  list-style-type: none;
+}
+
+/*Dropbutton*/
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 110%;
+}
+
+#games { background-color: rgb(255, 102, 102); }
+#purchase { background-color: rgb(64, 226, 160); }
+#account { background-color: rgb(124, 178, 232); }
+
+#games:hover, #games:active { background-color: rgba(255, 102, 102,0.7) }
+#purchase:hover, #purchase:active { background-color: rgba(64, 226, 161, 0.7);}
+#account:hover, #account:active { background-color: rgba(124, 178, 232,0.7); }
+
+
+/*a setting*/
+.listdown { 
+  width: 100%; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropcontent {
+  display: none;
+  position: relative;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+  text-align: justify;
+  text-decoration: none;
+  color: black;
+}
+
+div.dropcontent a {
+  color: black;
+  width: 100%;
+  padding: 20px 20px 20px 10px;
+  margin-right:20px;
+  text-decoration: none;
+  display: inline-block;
+  content: attr("href");
+}
+
+#dropeffect-1 { background-color: rgb(226, 194, 207); }
+#dropeffect-2 { background-color: rgb(132, 221, 115); }
+#dropeffect-3 { background-color: rgb(173, 192, 234); }
+
+div.dropcontent a:hover, div.dropcontent a:active {
+  text-align: right;
+  background-color: rgb(163, 163, 163);
+  display: block;
+  width: 100%;
+  color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.7);
+}
+
+/*JS will use this "show" class to display the block of the hidden list*/
+.show { display:block; }
+
+a, a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+a:hover, a:active {
+  color: rgb(127, 125, 255);
+}
+
+/*Contact Button*/
+#contact {
+  padding: 100px;
+}

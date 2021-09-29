@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MarketPlace - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/market.css" type="text/css">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+        <script src="JavaScript/market.js"></script>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="shoppingCart" onclick="location.href='shoppingcart.html'">
+            <p><i class="fas fa-shopping-cart"></i><span class="notification">11</span></p>
+        </button>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a class="active" href="#" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a href="register.html#register">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="active"><a href="#" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a href="register.html#register">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <div class="main">
+                <h2 id="title">Call of Duty</h2>
+              
+                <div id="itemsType">
+                    <a onclick="itemType(1,1)" id="typeAR" style="border:1.5px solid rgba(243, 234, 101, 0.904);background-color:#d7d870;">
+                        Assault Rifles
+                    </a>
+                    <a onclick="itemType(1,2)" id="typeSMG">
+                        Submachine Guns
+                    </a>
+                    <a onclick="itemType(1,3)" id="typeSG">
+                        Shotguns
+                    </a>
+                    <a onclick="itemType(1,4)" id="typeLMG">
+                        Light Machine Gun
+                    </a>
+                    <a onclick="itemType(1,5)" id="typeSR">
+                        Sniper Rifles
+                    </a>
+                    <a onclick="itemType(1,6)" id="typeHG">
+                        Handgun
+                    </a>
+                </div>
+                <div class="gameTypeSideBar">
+                    <a class="active" href="#">Call of Duty</a>
+                    <a href="market2.html">Assassins Creed Odessey</a>
+                </div>
+               <div id="addBox">
+                    <div class="contents">
+                        <div class="header">
+                            Succesful Added to Shopping Cart
+                        </div>
+                        <div class="body">
+                            <div id="addButton">
+                                <div class="continue" onclick="closeBox()">Continue Shopping</div>
+                                <div class="shopping" onclick="location.href='shoppingcart.html'">Go to Shopping Cart</div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                        </div>
+                    </div>
+                </div>
+                <!--AR-->
+                <div class="itemsList" id="AR">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarAR" onkeyup="searchItems(1,0)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Assault Rifles<br>
+                                     <br>Common</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/AR/Kilo 141.png">
+                            <div class="contents">
+                                <h1 id="kilo141"><span class="nameOfItem">Kilo 141</span></h1>
+                                <p>Fully automatic assault rifle with an ergonomic design that improves handling, and a steady fire rate helps stay on target.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Assault Rifles<br>
+                                   <br>Rare</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/AR/FN SCAR 17.png">
+                            <div class="contents">
+                                <h1 id="scar17"><span class="nameOfItem">FN SCAR 17</span></h1>
+                                <p>Large caliber, fully automatic assault rifle that provides high damage over long ranges.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Assault Rifles<br>
+                                   <br>Uncommon</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/AR/AK-47.png">
+                            <div class="contents">
+                                <h1 id="ak-47"><span class="nameOfItem">AK-47</span></h1>
+                                <p>Very reliable automatic assault rifle chambered in 7.62mm Soviet. Large caliber ammunition requires skill to control recoil.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Assault Rifles<br>
+                                     <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/AR/M4A1.png">
+                            <div class="contents">
+                                <h1 id="m4a1"><span class="nameOfItem">M4A1</span></h1>
+                                <p>Fully automatic, all purpose battle rifle. Control your shots, and this weapon can be very effective at range.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--SMG-->
+                <div class="itemsList" id="SMG">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarSMG" onkeyup="searchItems(1,1)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Submachine Guns<br>
+                                   <br>Common</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SMG/UZI.png">
+                            <div class="contents">
+                                <h1 id="uzi"><span class="nameOfItem">UZI</span></h1>
+                                <p>Fully automatic open bolt submachine gun. Simple, steady, and effective.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Submachine Guns<br>
+                                   <br>Rare</p>
+                      </div>
+                      <a>
+                        <img id="logo" src="Media/Call Of Duty/SMG/PP19.png">
+                        <div class="contents">
+                            <h1 id="pp19"><span class="nameOfItem">PP19</span></h1>
+                            <p>Well balanced automatic submachine gun with a high capacity helical magazine.</p>
+                            <div class="button" onclick="openBox()">
+                              Add to Cart
+                            </div>
+                            <div class="price">
+                              <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                          </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Submachine Guns<br>
+                                   <br>Uncommon</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SMG/UMP45.png">
+                            <div class="contents">
+                                <h1 id="ump45"><span class="nameOfItem">UMP45</span></h1>
+                                <p>A hard hitting submachine gun chambered in .45 Auto that will shred at longer distances than other weapons in its class. Moderate rate of fire keeps the gun in control while fully automatic.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Submachine Guns<br>
+                                     <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SMG/MP5.png">
+                            <div class="contents">
+                                <h1 id="mp5"><span class="nameOfItem">MP5</span></h1>
+                                <p>Fully automatic 9mm submachine gun. A perfect balance of stability, mobility, and lethality.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--ShotGun-->
+                <div class="itemsList" id="SG">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarSG" onkeyup="searchItems(1,2)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Shotguns<br>
+                                   <br>Common</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SG/725.png">
+                            <div class="contents">
+                                <h1 id="725"><span class="nameOfItem">725</span></h1>
+                                <p>Break action shotgun with 2 round capacity. A long back-bored barrel and cylindrical choke keeps spread tight and lethal over extended ranges.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Shotguns<br>
+                                     <br>Rare</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SG/MODEL680.png">
+                            <div class="contents">
+                                <h1 id="m680"><span class="nameOfItem">Model 680</span></h1>
+                                <p>Reliable, well rounded 12 gauge pump-action shotgun.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                            <div class="itemSummary">
+                            <p id="type">Shotguns<br>
+                                     <br>Uncommon</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SG/ORIGIN12.png">
+                            <div class="contents">
+                                <h1 id="origin12"><span class="nameOfItem">Origin 12</span></h1>
+                                <p>A hard hitting submachine gun chambered in .45 Auto that will shred at longer distances than other weapons in its class. Moderate rate of fire keeps the gun in control while fully automatic.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Shotguns<br>
+                                     <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SG/R9-0.png">
+                            <div class="contents">
+                                <h1 id="r90"><span class="nameOfItem">R9-0</span></h1>
+                                <p>Double barrels provide two rapid shots before each re-chamber.</p>
+                                <div class="button" onclick="openBox()">
+                                  Add to Cart
+                                </div>
+                                <div class="price">
+                                  <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                              </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--LightMachineGun-->
+                <div class="itemsList" id="LMG">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarLMG" onkeyup="searchItems(1,3)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Light Machine Gun<br>
+                                   <br>Common</p>
+                      </div>
+                      <a>
+                        <img id="logo" src="Media/Call Of Duty/LMG/M91.png">
+                        <div class="contents">
+                            <h1 id="m91"><span class="nameOfItem">M91</span></h1>
+                            <p>Robust light machine gun sacrifices mobility for stability. High caliber sustained fire will neutralize targets at long ranges.</p>
+                            <div class="button" onclick="openBox()">
+                              Add to Cart
+                            </div>
+                            <div class="price">
+                              <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                          </div>
+                        </div>
+                     </a>
+                  </div>
+                    
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Light Machine Gun<br>
+                                   <br>Rare</p>
+                      </div>
+                      <a>
+                          <img id="logo" src="Media/Call Of Duty/LMG/MG34.png">
+                          <div class="contents">
+                              <h1 id="mg34"><span class="nameOfItem">MG34</span></h1>
+                              <p>Fully automatic weapon with a high rate of fire and punishing 7.92 Mauser ammunition. Salvaged WW2 machine guns are still reliable and deadly on the battlefield.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                              </div>
+                              <div class="price">
+                                <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                       </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Light Machine Gun<br>
+                                   <br>Uncommon</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/LMG/PKM.png">
+                            <div class="contents">
+                                <h1 id="pkm"><span class="nameOfItem">PKM</span></h1>
+                                <p>Fully automatic light machine gun firing 7.62mm ammunition for high damage at a moderate fire rate.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Light Machine Gun<br>
+                                     <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/LMG/SA87.png">
+                            <div class="contents">
+                                <h1 id="sa87"><span class="nameOfItem">SA87</span></h1>
+                                <p>Fully automatic bullpup light machine gun. Lower rate of fire and 5.56mm ammunition keeps this rifle stable and effective at long ranges.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Sniper Rifles-->
+                <div class="itemsList" id="SR">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarSR" onkeyup="searchItems(1,4)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Sniper Rifle<br>
+                                   <br>Common</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SR/M14EBR.png">
+                            <div class="contents">
+                                <h1 id="m14ebr"><span class="nameOfItem">M14EBR</span></h1>
+                                <p>Semi-automatic long range battle rifle balances rate of fire with lethality.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Sniper Rifle<br>
+                                     <br>Rare</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SR/KAR98K.png">
+                            <div class="contents">
+                                <h1 id="kar98k"><span class="nameOfItem">KAR98K</span></h1>
+                                <p>Bolt action rifle chambered in 7.62 Mauser. A WW2 relic that is still extremely lethal in the hands of a rebel marksman.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Sniper Rifle<br>
+                                     <br>Uncommon</p>
+                        </div>
+                        <a>
+                          <img id="logo" src="Media/Call Of Duty/SR/AX50.png">
+                          <div class="contents">
+                              <h1 id="ax50"><span class="nameOfItem">AX50</span></h1>
+                              <p>Hard hitting, bolt action sniper rifle with .50 cal BMG ammunition. Its tungsten sabot tipped bullets are fast and powerful, but require precise shots over long distances.</p>
+                              <div class="button" onclick="openBox()">
+                                Add to Cart
+                              </div>
+                              <div class="price">
+                                <span id="normal">2500<img src="Media/Ucoins.png" id="coins"></span>
+                            </div>
+                          </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Sniper Rifle<br>
+                                     <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/SR/HDR.png">
+                            <div class="contents">
+                                <h1 id="hdr"><span class="nameOfItem">HDR</span></h1>
+                                <p>Anti-material bolt action sniper rifle chambered in 12.7x108mm ammunition. 745 gr bullets have a lower muzzle velocity, but are devastating at very long ranges.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">3000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--Handgun-->
+                <div class="itemsList" id="HG">
+                    <div class="bar">
+                        <i id="searchIcon" class="fas fa-search"></i>
+                        <input type="text" class="searchBar" id="searchBarHG" onkeyup="searchItems(1,5)" placeholder="Search for Call Of Duty items" title="Type in items name">
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Handgun<br>
+                                     <br>Common</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/HG/G18.png">
+                            <div class="contents">
+                                <h1 id="g18"><span class="nameOfItem">G18</span></h1>
+                                <p>Semi-automatic pistol chambered in .45 ACP ammunition. A reliable fall back when you find yourself in close quarters.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Handgun<br>
+                                   <br>Rare</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/HG/M19.png">
+                            <div class="contents">
+                                <h1 id="m19"><span class="nameOfItem">M19</span></h1>
+                                <p>Semi-automatic 9mm pistol, excellent stability with a rapid cycle rate.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                          <p id="type">Handgun</p>
+                                  <br>Uncommon</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/HG/DE.png">
+                            <div class="contents">
+                                <h1 id="de"><span class="nameOfItem">Desert Eagle</span></h1>
+                                <p>The most powerful semi-automatic handgun available, deals heavy damage up to intermediate ranges.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">1500<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="itemSlot">
+                        <div class="itemSummary">
+                            <p id="type">Handgun<br>
+                                   <br>Legendary</p>
+                        </div>
+                        <a>
+                            <img id="logo" src="Media/Call Of Duty/HG/1911.png">
+                            <div class="contents">
+                                <h1 id="1911"><span class="nameOfItem">M1911</span></h1>
+                                <p>A well rounded semi-automatic side arm with a moderate rate of fire. Slightly more range than your average .45 ACP pistol.</p>
+                                <div class="button" onclick="openBox()">
+                                    Add to Cart
+                                </div>
+                                <div class="price">
+                                    <span id="normal">2000<img src="Media/Ucoins.png" id="coins"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

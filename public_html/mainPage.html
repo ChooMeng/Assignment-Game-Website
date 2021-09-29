@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to UNFADE Website.</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/mainPage.css" type="text/css">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a href="register.html#register">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a href="register.html#register">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section id="middle">
+            <div id="index">
+                <h1 class="head1">Just for you</h1>
+                <iframe src="iframe/iframe.html" frameborder="0" width="100%" height="500" name="gameList"
+                allowpaymentrequest="gameList" scrolling="no" style="z-index: -1;" id="index"></iframe>
+                <br><br>
+            </div>
+            <br>
+            <br>
+            <div id="category">
+                <h1 class="head1">Category</h1>
+                <table width="100%">
+                    <tr>
+                        <td id="free" class="cate">
+                            <a href="iframe/category.html#topfree" target="category">Top Free</a>
+                        </td>
+                        <td rowspan="3">
+                            <iframe src="iframe/category.html#topfree" frameborder="0" name="category" width="100%" height="221" scrolling="no" id="frame"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="play" class="cate">
+                            <a href="iframe/category.html#topplay" target="category">Top Play</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="paid" class="cate">
+                            <a href="iframe/category.html#toppaid" target="category">Top Paid</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <br>
+            <div id="promotion">
+                <h1 class="head1">Promotion</h1>
+                <div id="promo">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="GameDetails/Darksouls3/Darksouls3.html" class="promimg">
+                                    <img src="Media/MainPage/darksouls3.jpg" alt="darksouls_promo">
+                                    <p>Dark Souls 3</p>
+                                    <div class="price">
+                                        <span id="discountBox">-22%</span><span id="discount">1740<img src="Media/Ucoins.png" id="coins"></span>
+                                        <br>
+                                        <span id="normal">1450<img src="Media/Ucoins.png" id="coins"></span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="GameDetails/Left4Dead2/Left4Dead2.html" class="promimg">
+                                    <img src="Media/MainPage/l4d2.jpg" alt="left_fordead_2_promo">
+                                    <p>Left 4 Dead 2</p>
+                                    <div class="price">
+                                        <span id="discountBox">-45%</span><span id="discount">1235<img src="Media/Ucoins.png" id="coins"></span>
+                                        <br>
+                                        <span id="normal">850<img src="Media/Ucoins.png" id="coins"></span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html" class="promimg">
+                                    <img src="Media/MainPage/a_tech.jpg" alt="a_tech_promo">
+                                    <p>A-Tech Cybernetic</p>
+                                    <div class="price">
+                                        <span id="discountBox">-43%</span><span id="discount">1144<img src="Media/Ucoins.png" id="coins"></span>
+                                        <br>
+                                        <span id="normal">800<img src="Media/Ucoins.png" id="coins"></span>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="GameDetails/BattleField3/BattleField3.html" class="promimg">
+                                    <img src="Media/MainPage/battlefield3.jpg" alt="battlefield3_promo">
+                                    <p>Battlefield 3</p>
+                                    <div class="price">
+                                        <span id="discountBox">-31%</span><span id="discount">1048<img src="Media/Ucoins.png" id="coins"></span>
+                                        <br>
+                                        <span id="normal">800<img src="Media/Ucoins.png" id="coins"></span>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

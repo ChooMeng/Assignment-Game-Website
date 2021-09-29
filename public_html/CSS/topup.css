@@ -1,0 +1,102 @@
+@import "animation.css";
+/*General*/
+section{
+    font-size:15px;
+    padding-bottom: 15px;
+    background-image: url("../Media/UcoinBackground.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+section #title{
+    color: rgb(48, 212, 212);
+    letter-spacing: 3px;
+    text-shadow:3px 3px rgb(0, 101, 253);
+    background-color: rgb(0, 46, 114);
+    text-align: center;
+    font-family: cursive;
+    margin-left:100px;
+    margin-right:100px;
+    margin: auto;
+    font-size:50px;
+    width:100%;
+}
+
+
+.coinList{
+    margin:auto;
+}
+
+section img{
+    width: 200px;
+    height: 200px;
+}
+
+section img:hover{
+    width: 210px;
+    height: 210px;
+    box-shadow:10px 10px rgb(19, 101, 224);
+}
+section table, section th, section td {
+    padding: 30px 0px;
+    height: auto;
+    border-collapse: collapse;
+}
+@media screen and (max-width: 800px) {
+    section td{
+        padding: 1%;
+    }
+    section img{
+        width: 180px;
+        height: 180px;
+    }
+    
+    section img:hover{
+        width: 185px;
+        height: 185px;
+    }
+}
+@media screen and (max-width: 700px) {
+    section td{
+        padding: 1%;
+    }
+    section img{
+        width: 160px;
+        height: 160px;
+    }
+    
+    section img:hover{
+        width: 165px;
+        height: 165px;
+    }
+}
+@media screen and (max-width: 550px) {
+    section td{
+        padding: 1%;
+    }
+    section img{
+        width: 140px;
+        height: 140px;
+    }
+    
+    section img:hover{
+        width: 145px;
+        height: 145px;
+    }
+}
+@media screen and (max-width: 465px) {
+    section td{
+        padding: 0.5%;
+    }
+    section img{
+        width: 130px;
+        height: 130px;
+    }
+    
+    section img:hover{
+        width: 135px;
+        height: 135px;
+    }
+}

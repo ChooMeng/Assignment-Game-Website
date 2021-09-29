@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bloodborne Details - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../../CSS/gamesdetails.css" type="text/css">
+        <script src="../../JavaScript/gamedetails.js"></script>
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="maxSlide(),cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="shoppingCart" onclick="location.href='../../shoppingcart.html'">
+            <p><i class="fas fa-shopping-cart"></i><span class="notification">5</span></p>
+        </button>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../../JavaScript/default.js"></script>
+        <header>
+            <a href="../../mainPage.html"><img id="logo" src="../../Media/logo.gif" width="100%"></a>
+        </header>
+        <div id="imgModal">
+            <span id="close" onclick="closeZoom()">&times;</span>
+            <img id="zoomImg">
+        </div>
+        <div id="addBox">
+            <div class="contents">
+                <div class="header">
+                    Bloodborne game
+                </div>
+                <div class="body">
+                    <div id="addButton">
+                        <div class="continue" onclick="closeBox()">Continue Shopping</div>
+                        <div class="shopping" onclick="location.href='../../shoppingcart.html'">Go to Shopping Cart</div>
+                    </div>
+                </div>
+                <div class="footer">
+                    Succesful Added to Shopping Cart
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="../../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../../gameslist.html" class="active" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="../../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../../signin.html#signin">Login</a>
+                                <a href="../../register.html#register">Register</a>
+                                <a href="../../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType" >
+                            <h1>Role-playing Games</h1>
+                            <a href="../Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="#" class="active">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game active"><a href="../../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="#" class="active">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="../../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="../../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../../signin.html#signin">Login</a>
+                        <a href="../../register.html#register">Register</a>
+                        <a href="../../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <h2 id="title">Bloodborne</h2>
+            <div class="main">
+                <div id="gameDetails">
+                    <div class="details">
+                        <p>
+                            Bloodborne is an action role-playing game played from a third-person perspective and features elements similar to those found in the Souls series of games, particularly Demon's Souls and Dark Souls. The player makes their way through different locations within the decrepit Gothic world of Yharnam, while battling varied enemies, including bosses, collecting different types of items that have many uses, interacting with the strange non-player characters, opening up shortcuts, and continuing through the main story.
+                            <br>
+                            At the beginning of the game, the player creates their character, the Hunter. The player determines the basic details of the Hunter; gender, hairstyle, name, skin colour, body shape, voice, and eye colour, are some of the options the player can customise. The player also chooses a starting class, known as an "Origin", which provides a basic backstory for the Hunter and sets the player's starting attributes. The Origins allow the player's Hunter to have a distinct play style, which, along with physical appearance, give the Hunter a unique personality. For example, one Origin may describe the Hunter as a cowardly weakling, which would indicate the player prefers to avoid conflict, while another Origin may describe the Hunter as being a ruthless, killing machine, which would indicate that the Hunter prefers to engage in combat. Another way the player defines their Hunter is by choosing what brotherhood they are a member of. These religious societies, known as "Covenants", each have their own views on the world of Yharnam.
+                            <br>
+                            The player can return to the safe zone, known as the "Hunter's Dream", by interacting with lanterns spread throughout the world of Yharnam. Doing so replenishes health, but repopulates all monsters in the game world. Lanterns also serve as the game's checkpoints; the player will return to the last activated lantern when they die. Positioned away from Yharnam, the Hunter's Dream delivers some of the game's basic features to the player. Players may purchase useful items, such as clothing, from the Messengers using Blood Echoes or Insight, level up their character by talking to the Doll, or upgrade their weapons in the workshop, among other things. Unlike Yharnam and all other locations in the game, the Hunter's Dream is considered completely safe as it is the only location in the game not to feature enemies. However, the last two boss battles of the game take place in the Hunter's Dream, although both are optional to the player.
+                            <br>
+                            Bloodborne's world of Yharnam is a large map full of inter-connected areas. Some areas of Yharnam are not connected to the main locations and require the player to teleport there via the gravestones in the Hunter's Dream. The player may be presented with multiple options when progressing through locations, but usually there is a main path that the player uses to progress through the story. When traversing the main path, the player will encounter paths that lead to completely different locations that are optional. Each path also eventually leads back to the central area the player started in. This provides the player with shortcuts, useful for when they die or need to backtrack.</p>
+                        <br>
+                        <a class="button" onclick="openBox()">
+                            Add to Cart
+                        </a>
+                        <div id="rating" title="3.50 / 5.00">
+                            <div id="empty">
+                                <span id="star">
+                                    ★★★★★
+                                </span>
+                            </div>
+                            <div id="fill" style="width:70%">
+                                <span id="star" class="checked-star">
+                                    ★★★★★
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <img id="gameIcon" onclick="zoomSlide(this)" src="../../Media/Games/Bloodborne.jpg">
+                    <div class="price">
+                        <span id="normal">1250<img src="../../Media/Ucoins.png" id="uCoins"></span>
+                    </div>
+                    <div id="desc">
+                        <span>Released: 3/6/2018</span>
+                        <br>
+                        <span>Updated: 2/4/2020</span>
+                        <br>
+                        <span>Version: 6.2</span>
+                    </div>
+                </div>
+                <div class="gamePreview">
+                    <h3>Game Preview</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X1iKYjVFigM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="slideSection">
+                    <div class="slideshow">
+                        <div id="back" class="slideIcon" onclick="changeSlide(-1)"><i class="fas fa-angle-left"></i></div>
+                        <img src="1.jpg" style="display:block" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <img src="2.jpg" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <img src="3.jpg" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <img src="4.jpg" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <img src="5.jpg" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <img src="6.jpg" class="fadeInSlide" onclick="zoomSlide(this)">
+                        <div id="pause" onclick="pauseSlide()" style="display:block"><i class="fas fa-pause" title="Click to pause"></i></div>
+                        <div id="play" onclick="playSlide()" style="display:none" title="Click to play"><i class="fas fa-play"></i></div>
+                        <div id="next" class="slideIcon" onclick="changeSlide(1)"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                    <div class="slideShowBar">
+                        <img src="1.jpg" class="active" onclick="specificSlide(0)">
+                        <img src="2.jpg" onclick="specificSlide(1)">
+                        <img src="3.jpg" onclick="specificSlide(2)">
+                        <img src="4.jpg" onclick="specificSlide(3)">
+                        <img src="5.jpg" onclick="specificSlide(4)">
+                        <img src="6.jpg" onclick="specificSlide(5)">
+                    </div>
+                </div>
+                <div class="requirement" id="requirement">
+                    <h3>Game Requirements</h3>
+                    <div class="minSystemRequirement">
+                        <table class="requirementTable">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">Minimum System Requirement</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2"></th>
+                                    <th colspan="2">Windows</th>
+                                    <th rowspan="2">macOS</th>
+                                </tr>
+                                <tr>
+                                    <th>Intel</th>
+                                    <th>AMD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Operating System</th>
+                                    <td colspan="2">Windows 7,8,8.1,10</td>
+                                    <td>macOS 10.13,10.14,10.15</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>i5-7400</td>
+                                    <td>Ryzen 5</td>
+                                    <td>m3-6Y30</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory</th>
+                                    <td colspan="3">1GB RAM</td>
+                                </tr>
+                                <tr>
+                                    <th>Storage</th>
+                                    <td colspan="3">5GB Available Space</td>
+                                </tr>
+                                <tr>
+                                    <th>Graphics hardware</th>
+                                    <td>GTX550</td>
+                                    <td>Radeon RX 550X</td>
+                                    <td>Intel HD Graphics 515</td>
+                                </tr>
+                                <tr>
+                                    <th>Sounds hardware</th>
+                                    <td colspan="3">DirectX 9.0b compatible 16-bit sound card</td>
+                                </tr>
+                                <tr>
+                                    <th>Network</th>
+                                    <td colspan="3">Broadband Network System</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="recommendSystemRequirement">
+                        <table class="requirementTable">
+                            <thead>
+                                <tr>
+                                    <th colspan="4">Recommend System Requirement</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2"></th>
+                                    <th colspan="2">Windows</th>
+                                    <th rowspan="2">macOS</th>
+                                </tr>
+                                <tr>
+                                    <th>Intel</th>
+                                    <th>AMD</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Operating System</th>
+                                    <td colspan="2">Windows 10</td>
+                                    <td>macOS 10.15</td>
+                                </tr>
+                                <tr>
+                                    <th>CPU</th>
+                                    <td>i7-970</td>
+                                    <td>Ryzen 7</td>
+                                    <td>i5-7Y54</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory</th>
+                                    <td colspan="3">1GB RAM</td>
+                                </tr>
+                                <tr>
+                                    <th>Storage</th>
+                                    <td colspan="3">5GB Available Space</td>
+                                </tr>
+                                <tr>
+                                    <th>Graphics hardware</th>
+                                    <td>GTX1080</td>
+                                    <td>Radeon RX 590</td>
+                                    <td>Intel HD Graphics 615</td>
+                                </tr>
+                                <tr>
+                                    <th>Sounds hardware</th>
+                                    <td colspan="3">DirectX 11</td>
+                                </tr>
+                                <tr>
+                                    <th>Network</th>
+                                    <td colspan="3">Broadband Network System</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="review" class="review">
+                    <h3>Reviews</h3>
+                    <div class="userReview">
+                        <div class="user">
+                            <p>Chew Wei Chung</p>
+                            <img src="../../Media/avatar-male.png">
+                        </div>
+                        <div class="comments">
+                            <i class="fas fa-thumbs-down"> Not-Recommend</i>
+                            <div id="rating" title="2.60 / 5.00">
+                                <div id="empty">
+                                    <span id="star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                                <div id="fill" style="width:52%">
+                                    <span id="star" class="checked-star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                            </div>
+                            <p id="date">Posted at: 11-11-2019</p>
+                            <p>Storyline not good</p>
+                        </div>
+                    </div>
+                    <div class="userReview">
+                        <div class="user">
+                            <p>Choo Zhi Yan</p>
+                            <img src="../../Media/avatar-female.png">
+                        </div>
+                        <div class="comments">
+                            <i class="fas fa-thumbs-up"> Recommend</i>
+                            <div id="rating" title="3.90 / 5.00">
+                                <div id="empty">
+                                    <span id="star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                                <div id="fill" style="width:78%">
+                                    <span id="star" class="checked-star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                            </div>
+                            <p id="date">Posted at: 16-1-2020</p>
+                            <p>Good graphic design</p>
+                        </div>
+                    </div>
+                    <div class="userReview">
+                        <div class="user">
+                            <p>William Choong</p>
+                            <img src="../../Media/avatar-male.png">
+                        </div>
+                        <div class="comments">
+                            <i class="fas fa-thumbs-up"> Recommend</i>
+                            <div id="rating" title="4.00 / 5.00">
+                                <div id="empty">
+                                    <span id="star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                                <div id="fill" style="width:80%">
+                                    <span id="star" class="checked-star">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                            </div>
+                            <p id="date">Posted at: 27-3-2020</p>
+                            <p>Having good gaming experience in this game</p>
+                        </div>
+                    </div>
+                    <form id="reviewForm" class="reviewForm" onsubmit="succesfulSubmit()">
+                        <div>
+                            <label for="name" id="nameL">Name<span class="required">*</span> </label>
+                            <input type="text" name="name" id="name" placeholder="Name that will display" size="30" required="required" tabindex="1">
+                        </div>
+                        <div>
+                            <label id="genderL">Gender<span class="required">*</span> </label>
+                            <input type="radio" name="gender" id="male" value="male" required="required">
+                            <label for="gender"><i class="fas fa-user" id="male" ></i> Male</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="gender"><i class="fas fa-user" id="female" ></i> Female</label>
+                        </div>
+                        <div>
+                            <label id="recommendationL">Do you recommend this game?<span class="required">*</span> </label>
+                            <input type="radio" name="recommendation" id="recommend" value="recommend" required="required">
+                            <label for="recommendation"><i class="fas fa-thumbs-up"></i>Yes</label>
+                            <input type="radio" name="recommendation" id="notrecommend" value="notrecommend">
+                            <label for="recommendation"><i class="fas fa-thumbs-down"></i>No</label>
+                        </div>
+                        <div>
+                            <label for="rate" id="rateL">Rating<span class="required">*</span> </label>
+                            <b>0</b> <input type="range" name="rate" id="rate" value="0.00" min="0" max="5" step="0.01" oninput="changeRateRange()" required="required"> <b>5</b>
+                            <input type="text" name="rateValue" id="rateValue" value="0" oninput="changeRate()" size="2" pattern="^\d*(\.\d{0,2})?$" tabindex="2">
+                        </div>
+                        <div>
+                            <label id="commentsL">Comments </label>
+                            <textarea name="comments" id="comments" cols="100%" rows="10" placeholder="Comments for the game" style="display:block" tabindex="3"></textarea>
+                        </div>
+                        <div id="button">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+                Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

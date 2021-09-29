@@ -1,0 +1,167 @@
+* { font-family: Arial, Helvetica, sans-serif; }
+body { 
+    background-image: url("../Media/main.gif");
+    background-attachment: fixed;
+    background-size: cover;
+    }
+#coins {
+    width:32px;
+    height:32px;
+    margin-bottom: -9px;
+}
+/*Games index*/
+#promo{
+    text-align:center;
+}
+#promo p{
+    text-align: center;
+}
+#promo td{
+    display:inline-block;
+}
+
+/*Section middle*/
+#middle {
+    margin: 50px;
+}
+
+.head1 {
+    text-indent: 30px;
+    font-size: 2.0em;
+    font-variant: small-caps;
+    margin-bottom: 8px;
+} 
+/*Index*/
+div#index {
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(255, 59, 59);
+    border-radius: 25px;
+}
+
+/*Category*/
+div#category {
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(136, 255, 0);
+}
+#category table {
+    margin: auto;
+    font-family: Arial, Roboto;
+    border-style: none;
+    border-width: thin;
+    vertical-align: text-top;
+    padding: 30px;
+}
+
+
+.cate {
+    width: 150px;
+}
+
+tr td {
+    border: white solid 5px;
+    position: relative;
+    
+}
+
+tr {
+    content: attr("href");
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5em;
+    text-align: center;
+}
+td a{
+    text-align:center;
+    display: table-cell;
+    padding: 20px;
+}
+a:link, a:visited {
+    color: black;
+}
+
+a:hover, a:active {
+    color: white;
+    font-weight: bold;
+}
+
+
+/*Change color div*/
+#free, #free:visited { background-color: rgba(255, 102, 102,0.5); }
+#play, #play:visited { background-color: rgba(64, 226, 160,0.5); }
+#paid, #paid:visited { background-color: rgba(124, 178, 232,0.5); }
+
+#free:hover, #free:active { background-color: rgb(255, 102, 102); }
+#play:hover, #play:active { background-color: rgb(64, 226, 160); }
+#paid:hover, #paid:active { background-color: rgb(124, 178, 232); }
+
+/*Promotion*/
+#promotion {
+    border-radius: 15px;
+    background-color: rgb(77, 133, 255);
+    margin: auto;
+    padding: 20px 20px 30px;
+    display: block;
+}
+
+#promo table {
+    margin: auto;
+}
+
+#promo table tr td, #promo table tr td:visited {
+    background-color: rgb(77, 219, 255);
+    border-radius: 15px;
+}
+#promo table tr td:hover { background-color: rgb(116, 77, 255); }
+
+.promimg img {
+    text-align: center;
+    margin: auto;
+    width: 220px;
+    height: 107.5px;
+}
+
+/*Price box*/
+.price {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-style: italic;
+    border-radius: 50%;
+    box-shadow: 2px 1.5px brown;
+    background-color: rgb(153, 39, 39);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#discountBox {
+    width: 10px;
+    background-color: rgb(108, 253, 108);
+    text-decoration: none;
+    color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px 5px 5px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.price #discount {
+    padding: 2px 8px;
+    margin-bottom: 5px;
+    text-decoration: line-through;
+    font-size: 0.8em;
+    text-decoration-color: black;
+}

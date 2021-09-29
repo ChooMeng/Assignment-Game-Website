@@ -1,0 +1,365 @@
+
+@import "animation.css";
+/*General*/
+section{
+    font-size:12px;
+    padding-bottom: 15px;
+    background-image: url("../Media/bg.gif");
+    background-attachment: fixed;
+    margin: auto;
+}
+aside{
+    margin:0px;
+    padding:0px;
+    float:right;
+    font-size:30px;
+    width:20%;
+}
+@media screen and (max-width: 800px) {
+    aside{
+        margin:0px;
+        padding:0px;
+        float:right;
+        font-size:30px;
+        width:25%;
+    }
+}
+#title{
+    color: rgba(253, 185, 60, 0.884);
+    letter-spacing: 2px;
+    text-shadow:2px 2px gold;
+    margin: 0px;
+    padding: 10px 10px 0px 10px;
+    text-align: center;
+    font-family: cursive;
+    font-size:36px;
+    width:80%;
+}
+.main{
+    display:table;
+    width:80%;
+    margin:auto;
+}
+/*Type of the games*/
+#gamesType{
+    width:80%;
+    overflow:hidden;
+    text-align:center;
+}
+#gamesType div{
+    display:inline-block;
+    margin-top:15px;
+}
+#gamesType div>a{
+    margin-left: auto;
+    padding:5px 10px 0px;
+    font-size:18px;
+    font-weight:bold;
+    border: 1.5px solid darkkhaki;
+    background-color: rgba(189, 183, 107, 0.938);
+    border-radius:8px;
+    max-width:200px;
+    min-width:50px;
+    font-style:italic;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#gamesType div>a:hover{
+    border: 1.5px solid rgba(243, 234, 101, 0.904);
+    background-color:#d7d870;
+    cursor:pointer;
+}
+/* Aside */
+aside > div{
+    margin: 10px 10px;
+    padding: 5px 5px;
+    width:100%;
+    background-color: #5270abf3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#rank p{
+    text-align:left;
+    font: 16px Cambria;
+    color:white;
+    padding: 2px 5px;
+    margin: 5px 0px;
+}
+#rank p > span{
+    font: bold 12px Helvetica;
+    padding: 2px 8px;
+    width:16px;
+    border-radius:30%;
+    color:black;
+}
+#rank h1{
+    text-align:center;
+    text-decoration:underline;
+    font-size:18px;
+    font-family: Georgia;
+    font-style:italic;
+    margin: 5px;
+    color: rgb(170, 226, 248);
+    text-shadow: 1px 1px rgb(53, 231, 255);
+}
+#rank p .Top1{
+    background-color: #D6AF36;
+}
+#rank p .Top2{
+    background-color: #FEE101;
+}
+#rank p .Top3{
+    background-color: #D7D7D7;
+}
+#rank p .Top4{
+    background-color: #A7A7AD;
+}
+#rank p .Top5{
+    background-color: #824A02;
+    color:white;
+}
+/*List of the games*/
+.gamesList{
+    width:80%;
+}
+@media screen and (max-width: 800px) {
+    .gamesList{
+        width:75%;
+    }
+}
+/*Search Bar*/
+.bar{
+    margin: 10px 0px;
+    padding: 10px;
+    text-align:center;
+    background-color: #5270abf3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.searchBar{
+    text-align:left;
+    border: 3px solid #ddd;
+    padding: 0px 10px;
+    margin-left: -3px;
+    height: 30px;
+    width:80%;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+@media screen and (max-width: 600px) {
+    .searchBar{
+        width:75%;
+    }
+}
+#searchIcon{
+    font-size:16px;
+    background-color: rgb(207, 204, 204);
+    border: 3px solid rgb(207, 204, 204);
+    border-right:none;
+    padding: 5.5px 10px 8.5px;
+}
+/*Each game section*/
+.gamesList .gameSlot{
+    margin-top: 10px;
+    background-color: #5270abf3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 100px;
+    overflow:hidden;
+}
+.rpgList,.fpsList,.horrorList{
+    animation-name: fadein;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease;
+    -o-animation-name: fadeIn;
+    -o-animation-duration: 0.2s;
+    -o-animation-timing-function: ease;
+    -moz-animation-name: fadeIn;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-timing-function: ease;
+}
+.gamesList .gameSlot:hover{
+    cursor:pointer;
+    background-color: rgb(24, 133, 206);
+    
+}
+.gamesList .gameSlot a >#logo{
+    padding: 10px 1% 10px;
+    width:20%;
+    height:auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align:center;
+}
+.gamesList .gameSlot a .contents{
+    margin:0px;
+    width:76.5%;
+    float:right;
+    padding:0px;
+}
+.gamesList .emptySlot{
+    margin: 15px 0px 0px 10px;
+    background-color: #2d58adc0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 60px;
+    overflow:hidden;
+    text-align:center;
+    color:white;
+    font: italic bold 20px Roboto;
+    display:none;
+}
+.gamesList .gameSlot a .contents > h1{
+    text-align:left;
+    color:white;
+    font: italic bold 20px Roboto;
+}
+.gamesList .gameSlot a .contents > p{
+    text-decoration:none;
+    font-size:16px;
+    font: 16px 'Times News Roman';
+    text-align:justify;
+    padding-right:30px;
+    color: white;
+    margin:0px;
+}
+.gamesList .gameSlot a .contents > img{
+    position:static;
+    width:64px;
+    height:64px;
+    float:right;
+}
+
+.gamesList .gameSlot:hover a .contents > img{
+    filter: grayscale(60%);
+}
+#horror{
+    display:none;
+}
+#fps{
+    display:none;
+}
+.version{
+    font-size:11.5px;
+    font-style:normal;
+}
+.version::before{
+    content: "V";
+}
+/*Summary of each game*/
+.gameSummary{
+    display:flex;
+    position:absolute;
+    font-size:20px;
+    left:74%;
+    display:none;
+    overflow:hidden;
+    width:12.5%;
+    background-color:white;
+    padding:5px;
+    border-radius: 10px;
+}
+.gameSlot:hover .gameSummary:hover{
+    display:none;
+}
+.gameSlot:hover .gameSummary{
+    display:block;
+}
+.gameSummary p{
+    margin:0px;
+}
+.gameSummary #date{
+    font-size:16px;
+}
+
+/*Rating of each game*/
+#rating{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width:200px;
+}
+#rating p{
+    font-size:16px;
+}
+#rating #fill{
+    position:absolute;
+    color:orange;
+    bottom:1px;
+    font-size:16px;
+    display:block;
+    overflow:hidden;
+}
+#rating #empty{
+    font-size:16px;
+}
+#star{
+    display:inline-block;
+}
+#discountBox{
+    width: 10px;
+    background-color:rgb(108, 253, 108);
+    text-decoration:none;
+    color:black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px 5px 5px 5px;
+    font-size:0.8em;
+    font-weight:bold;
+}
+
+/*Price for game*/
+.gamesList .gameSlot a .contents> .price{
+    width: auto;
+    display:block;
+    height: auto;
+    float:right;
+    font-size:20px;
+    text-align: center;
+    margin: 2px 15px 5px;
+    color: white;
+    font-style:italic;
+    border-radius:50%;
+    box-shadow: 2px 1.5px brown;
+    background-color: rgb(153, 39, 39);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.price #discount{
+    padding: 2px 8px;
+    margin-bottom: 5px;
+    text-decoration:line-through;
+    font-size:0.8em;
+    text-decoration-color:black;
+}
+.price #normal{
+    padding: 5px 10px;
+    
+}
+#uCoins{
+    width:32px;
+    height:32px;
+    margin-bottom: -9px;
+}

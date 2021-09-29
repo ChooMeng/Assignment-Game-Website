@@ -1,0 +1,374 @@
+@import "animation.css";
+/* General*/
+section{
+    font-size:0px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    background-image: url("../Media/bg.gif");
+    background-attachment: fixed;
+    margin: auto;
+}
+aside{
+    margin:10px 1%;
+    float:right;
+    font-size:30px;
+    width:20%;
+}
+#title{
+    color: rgba(241, 130, 26, 0.973);
+    letter-spacing: 2px;
+    text-shadow:2px 2px rgb(255, 187, 131);
+    margin: 0px;
+    text-align: center;
+    font-family: cursive;
+    font-size:36px;
+    width:100%;
+}
+.main{
+    background-color: #5270abf3;
+    display:table;
+    height: 100vh;
+    width:80%;
+    margin:10px auto;
+    padding-bottom: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Aside */
+aside div.part1{
+    font-size:20px;
+    background-color: rgba(24, 133, 206, 0.767);
+    color:white;
+    padding: 0px 0px 5px;
+    text-align:center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width:100%;
+}
+aside div.part1 h2{
+    background-color: #2d58adc0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+    margin-bottom:5px;
+}
+@media screen and (max-width: 500px) {
+    aside div.part1 h2{
+        font-size:18px;
+    }
+}
+aside div.cartDetails{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+aside div.cartDetails span{
+    display:inline-block;
+    
+}
+aside div.cartDetails b{
+    display:block;
+}
+aside div p{
+     margin:0px;
+}
+.promotionalCode{
+    padding:15px 5px;
+    background-color: rgba(0, 132, 255, 0.767);
+    color:white;
+}
+@media screen and (max-width: 500px) {
+    .promotionalCode{
+        font-size:16px;
+    }
+}
+.promotionalCode input{
+    text-align:center;
+    margin: 2px 0px 2px 0px;
+    height:17px;
+    background-color:rgba(255, 255, 255);
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2px 0px;
+    width:90%;
+}
+.promotionalCode .promoteInput{
+    display:inline-block;
+    width:80%;
+}
+.promotionalCode input:focus{
+    border:2px solid rgba(31, 79, 155, 0.562);
+    outline:none;
+}
+.promotionalCode #unknown{
+    margin-left: -2%;
+    margin-top: 5px;
+    width:10%;
+    display:inline-block;
+    color:black;
+    font-size:12px;
+    padding: 2px 1.2%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:lightgray;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.promotionalCode #valid{
+    margin-left: -2%;
+    margin-top: 5px;
+    width:10%;
+    display:inline-block;
+    color:black;
+    display:none;
+    font-size:12px;
+    padding: 2px 1%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:lightgreen;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.promotionalCode #invalid{
+    margin-left: -2%;
+    margin-top: 5px;
+    width:10%;
+    display:inline-block;
+    color:white;
+    font-size:12px;
+    display:none;
+    padding: 2px 1%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:rgb(250, 48, 48);
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+::placeholder{
+    text-align:center;
+}
+aside div.checkOut input{
+    font-size:18px;
+    width:100%;
+    color:white;
+    background-color: rgba(24, 133, 206, 0.767);
+    padding: 3px 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+aside div.checkOut input:hover{
+    cursor:pointer;
+    background-color: rgba(18, 106, 165, 0.192);
+}
+aside div.checkOut input:focus{
+    outline:none;
+}
+
+
+/* List of items */
+.itemList{
+    width:77.5%;
+}
+@media screen and (max-width: 800px) {
+    .itemList{
+        width:75%;
+    }
+}
+.itemList .itemSlot{
+    margin: 15px 0px 0px 10px;
+    background-color: #2d58adc0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 100px;
+    overflow:hidden;
+}
+.itemList .itemSlot div >#logo{
+    padding: 10px 1% 10px;
+    width:20%;
+    height:auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align:center;
+}
+.itemList .itemSlot div .contents{
+    margin:0px;
+    width:76.5%;
+    float:right;
+    padding:0px;
+}
+.itemList .itemSlot div .contents > h1{
+    text-align:left;
+    color:white;
+    font: italic bold 20px Roboto;
+}
+/* Game Version */
+.version{
+    font-size:11.5px;
+    font-style:normal;
+}
+.version::before{
+    content: "V";
+}
+.remove{
+    font-size:16px;
+    background-color:red;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color:white;
+    padding:5px 10px;
+    position:static;
+    float:right;
+}
+.remove:hover{
+    background-color:rgba(233, 17, 17, 0.842);
+    cursor:pointer;
+}
+.itemList .itemSlot div .contents > p{
+    text-decoration:none;
+    font-size:16px;
+    font: 16px 'Times News Roman';
+    text-align:justify;
+    padding-right:30px;
+    color: white;
+    margin:0px;
+}
+/* Price */
+.itemList .itemSlot div .contents > .price{
+    display:block;
+    height: auto;
+    float:left;
+    font-size:20px;
+    margin: 8px 0px 5px;
+    color: white;
+    font-style:italic;
+    border-radius:50%;
+    text-align:center;
+    box-shadow: 2px 1.5px brown;
+    background-color: rgb(153, 39, 39);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.price #discount{
+    padding: 2px 8px;
+    margin-bottom: 5px;
+    text-decoration:line-through;
+    font-size:0.8em;
+    text-decoration-color:black;
+}
+.price #normal{
+    padding: 5px 10px;
+    
+}
+#uCoins{
+    width:32px;
+    height:32px;
+    margin-bottom: -9px;
+}
+#discountBox{
+    width: 10px;
+    background-color:rgb(108, 253, 108);
+    text-decoration:none;
+    color:black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px 5px 5px 5px;
+    font-size:0.8em;
+    font-weight:bold;
+}
+.itemList #emptySlot{
+    margin: 15px 0px 0px 10px;
+    background-color: #2d58adc0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 60px;
+    overflow:hidden;
+    text-align:center;
+    color:white;
+    font: italic bold 20px Roboto;
+    display:none;
+}
+
+/* Amount Bar */
+.amountBar{
+    float:right;
+    margin: 10px 20px 5px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.amountBar span:hover{
+    background-color:rgb(168, 167, 167);
+    cursor:pointer;
+}
+.amountBar span{
+    background-color:lightgray;
+    width:24px;
+    height:24px;
+    padding: 5px 10px 6px;
+    font: bold 16px fantasy;
+}
+.amountBar input{
+    width:32px;
+    height:24px;
+    font-size:16px;
+    padding-top:2px;
+    text-align:center;
+}
+
+/* Fade out item */
+.itemFadeOut{
+    animation-name: fadeOut;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease;
+    -o-animation-name: fadeOut;
+    -o-animation-duration: 0.2s;
+    -o-animation-timing-function: ease;
+    -moz-animation-name: fadeOut;
+    -moz-animation-duration: 0.2s;
+    -moz-animation-timing-function: ease;
+}

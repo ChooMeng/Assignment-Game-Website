@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="CSS/payment.css" type="text/css">
+        <link rel="stylesheet" href="CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="JavaScript/default.js"></script>
+        <header>
+            <a href="mainPage.html"><img id="logo" src="Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="signin.html#signin">Login</a>
+                                <a href="register.html#register">Register</a>
+                                <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="signin.html#signin">Login</a>
+                        <a href="register.html#register">Register</a>
+                        <a href="forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <h1>Payment</h1>
+            <form action="topup.html" onsubmit="alert('Succesful topup, check your email for the information.')">
+                <table>
+                    <tr>
+                        <td style="width:450px">
+                            <div class="userInfo">
+                                <fieldset>
+                                    <legend>User Information</legend>
+                                    <label for="uName">Full Name<span id="asterik"></span></label>
+                                    <input type="text" id="uName" name="username" placeholder="Wei Chung Chew" size="40" required>
+                                    <label for="uEmail">Email<span id="asterik"></span></label>
+                                    <input type="email" id="uEmail" name="usermail" placeholder="jake@example.com" required style="padding: 12px;">
+                                    <label for="uTel">Telephone<span id="asterik"></span></label>
+                                    <input type="tel" id="uTel" name="usertel" placeholder="xxx-xxxxxxx" pattern="[0-9]{3}-[0-9]{7}" maxlength="11" required>
+                                    <label for="uAdddress">Address<span id="asterik"></span></label>
+                                    <input type="text" id="uAddress" name="useraddress" placeholder="1,Lorong 10/SS1,Taman Bahagia" size="50" required>
+                                    <div class="address">
+                                        <div class="sub">
+                                            <label for="uCity">City<span id="asterik"></span></label>
+                                            <input type="text" id="uCity" name="usercity" placeholder="Simpang Ampat" required>
+                                        </div>
+                                        <div class="sub">
+                                            <label for="uState">State<span id="asterik"></span></label>
+                                            <select id="uState">
+                                                <option value="johor">Johor</option>
+                                                <option value="kedah">Kedah</option>
+                                                <option value="kelantan">Kelantan</option>
+                                                <option value="malacca">Malacca</option>
+                                                <option value="negerisembilan">Negeri Sembilan</option>
+                                                <option value="pahang">Pahang</option>
+                                                <option value="penang">Penang</option>
+                                                <option value="perak">Perak</option>
+                                                <option value="perlis">Perlis</option>
+                                                <option value="sabah">Sabah</option>
+                                                <option value="sarawak">Sarawak</option>
+                                                <option value="selangor">Selangor</option>
+                                                <option value="terengganu">Terrenganu</option>
+                                            </select>
+                                        </div>
+                                        <div class="sub">
+                                            <label for="uState">ZipCode<span id="asterik"></span></label>
+                                            <input type="text" id="uZip" name="userzipcode" placeholder="11500" maxlength="5" required>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cardInfo">
+                                <fieldset>
+                                    <legend>Card Information</legend>
+                                    <h3>Accepted Cards</h3>
+                                    <div class="icon">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="fName">Name on Card<span id="asterik"></span></label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Chew Wei Chung" required>
+                                    <label for="ccnum">Credit card number<span id="asterik"></span></label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" maxlength="19" required>
+                                    <div class="address">
+                                        <div class="sub">
+                                            <label for="expmonth">Exp Month<span id="asterik"></span></label>
+                                            <select id="expmonth">
+                                                <option value="jan">January</option>
+                                                <option value="feb">February</option>
+                                                <option value="mar">March</option>
+                                                <option value="apr">April</option>
+                                                <option value="may">May</option>
+                                                <option value="jun">June</option>
+                                                <option value="jul">July</option>
+                                                <option value="aug">August</option>
+                                                <option value="sept">September</option>
+                                                <option value="oct">October</option>
+                                                <option value="nov">November</option>
+                                                <option value="dec">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="sub">
+                                            <label for="expyear">Exp Year<span id="asterik"></span></label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2018" pattern="[0-9]{4}" maxlength="4" required>
+                                        </div>
+                                        <div class="sub">
+                                            <label for="cvv">CVV<span id="asterik"></span></label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="352" pattern="[0-9]{3}" maxlength="3" required>
+                                        </div>
+                                    </div>
+                                    
+                                </fieldset>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div id="submit">
+                    <input type="submit" value="Submit">
+                </div>
+                
+            </form>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

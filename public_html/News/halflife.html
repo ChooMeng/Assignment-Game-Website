@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HalfLife News - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/News/halflife.css" type="text/css">
+        <script src="../JavaScript/news.js"></script>
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a class="active" href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section id="news">
+            <a href="../news.html"><button id="back" name="back" >Back to news</button></a>
+        
+            <section id="right">
+            <nav class="vertical">
+                <h1>Top News</h1>
+                <ul style="list-style-image: url(../Media/leaf32.png);">
+                    <li><a href="acodyssey.html">Assassins Creed Odyssey</a></li>
+                   <li><a href="bulletstorm.html">Bulletstorm</li></a>
+                   <li><a href="callofduty.html">Call of Duty</a></li>
+                   <li><a href="darksoul.html">Dark Soul</a></li>
+                   <li><a href="halflife.html">Half Life</a></li>
+                   <li><a href="left4dead2.html">Left 4 Dead 2</a></li>
+                   <li><a href="outlast.html">Outlast</a></li>
+                 
+                </ul>
+             </nav>
+            </section>
+        
+            <div class="news">
+                
+                <div class="title"><h1>Valve explains why it tried and failed to make multiple Half-Life 3s</h1><br><br>
+                
+                <img id="pic" src="../Media/News/halflife/1.png"><br><br> 
+                <p><span style="color: yellow;">In context:</span>  Yesterday's launch of Half-Life: Alyx was something of a turning point for Valve. After years of not making any actual games (except for ill-fated card game Artifact), some grew concerned that not only was the Half-Life franchise dead, but that Valve's interest in game development as a whole had waned. However, the outstanding critical success of Alyx has proven that neither of those concerns are well-founded these days.</p>
+        
+                <p>Valve is returning to the Half-Life series (and game making) with a vengeance, and it's using Half-Life: Alyx as an opportunity to discuss its long and troubled history with this franchise. According to Valve's Robin Walker, the core reason Half-Life 3 (or Half-Life 2: Episode 3) doesn't exist -- yet -- is that they simply haven't been able to make the right game just yet.</p>
+        
+                <p>Indeed, Walker says Valve has actually tried to make Half-Life 2: Episode 3 on multiple occasions, but none of the attempts quite met the lofty expectations of the developers. The Half-Life games, Walker believes, are intended to create an interesting experience at the intersection between technology and art. He wants them to truly move the industry forward in some way, or at least experiment with some unique concepts.</p>
+                <img id="pic" src="../Media/News/halflife/2.png"><br><br> 
+        
+                <p>Half-Life 1, for example, was an attempt to tell "more interesting stories" with shooters; effectively proving that they could be more than a series of mindless action sequences. Half-Life 2 (And its respective episodes) focused more on character development and toying with physics -- physics-based puzzle game Portal was likely the culmination of the lessons Valve learned during its work on Half-Life 2.</p>
+        
+                <p>In other words, just making Half-Life 2: Episode 3 wasn't enough for Valve. They wanted something bigger and better, and simply couldn't find the right format to make that work -- until now, in a sense. Half-Life Alyx once again provided Valve with an opportunity to push a genre forward, and by all accounts, it's done so successfully: Alyx is already being referred to as one of the first true "killer apps" for the VR platform (though games like Boneworks and Beat Saber are also strong contenders).</p>
+        
+                <p>Of course, it's still no Half-Life 3 (or Episode 3). Yes, it features many of the same characters as the first couple of games, but Alyx is a prequel, not a sequel, and its VR-only nature has alienated a large portion of the Half-Life fanbase. Nonetheless, Valve has made it clear that Alyx represents a return to the Half-Life franchise, not an end to it. We can almost certainly expect to see more Half-Life games hit the market in the coming years.</p>
+        
+                <p>With that said, given Valve's track record and its notorious inability to count to three, we wouldn't blame our readers for taking the company's claims with a grain of salt.</p><br><br><br>
+        
+                <p><i id="like" onclick="like5()" class="fas fa-thumbs-up"></i></p>
+                <p id="result"></p>
+            
+            </div>  
+            <a href="left4dead2.html" ><button id="next" id="next">Next</div></a>    
+            </div>
+        
+            </div>
+            
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+        background-color: rgb(255, 118, 118);
+}
+
+section {
+    margin: 50px;
+}
+
+section h1  {
+    font-size: 2.0em;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+section h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section ul {
+    font-size: 1.2em;
+    border: solid 1px;
+    background-color: lightblue;
+    padding: 30px;
+}
+
+section p {
+    font-size: 1.2em;
+}
+
+section a {
+    text-decoration: none;
+    color: black;
+}
+
+section a:hover {
+    color: white;
+}
+
+section li a:hover {
+    color: red;
+}

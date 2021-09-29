@@ -1,0 +1,803 @@
+@import "animation.css";
+/* General */
+section{
+    font-size:0px;
+    padding-bottom: 15px;
+    background-image: url("../Media/bg.gif");
+    background-attachment: fixed;
+}
+.main{
+    width:80%;
+    margin:auto;
+    background-color: #5270abf3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#title{
+    color: rgba(253, 185, 60, 0.884);
+    letter-spacing: 2px;
+    text-shadow:2px 2px gold;
+    margin: 0px;
+    text-align: center;
+    font-family: cursive;
+    font-size:36px;
+    width:100%;
+}
+/*Game Details*/
+#gameDetails{
+    margin-top: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 100px;
+    overflow:hidden; 
+}
+#gameDetails #gameIcon{
+    width:25%;
+    margin: 10px 1% 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor:pointer;
+}
+#gameDetails #desc{
+    font-size:16px;
+    width:25%;
+    font-style:italic;
+    margin: 0px 10px;
+    color:rgb(216, 210, 210);
+    padding: auto;
+    text-align:center;
+}
+#gameDetails p{
+    font-size:16px;
+    color:white;
+    text-align:justify;
+    padding-right:20px;
+    margin-bottom:3px;
+}
+#gameDetails .details{
+    width:72%;
+    float:right;
+}
+/*Game Price*/
+.price{
+    width:25%;
+    height: auto;
+    font-size:20px;
+    text-align: center;
+    margin: 2px 10px 5px;
+    color: white;
+    font-style:italic;
+    border-radius:50%;
+    box-shadow: 2px 1.5px brown;
+    background-color: rgb(153, 39, 39);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.price #discount{
+    padding: 2px 8px;
+    margin-bottom: 5px;
+    text-decoration:line-through;
+    font-size:0.8em;
+    text-decoration-color:black;
+}
+.price #normal{
+    padding: 5px 10px;
+    
+}
+#uCoins{
+    width:32px;
+    height:32px;
+    margin-bottom: -9px;
+}
+#discountBox{
+    width: 10px;
+    background-color:rgb(108, 253, 108);
+    text-decoration:none;
+    color:black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px 5px 5px 5px;
+    font-size:0.8em;
+    font-weight:bold;
+}
+/* Rating */
+#rating{
+    position: relative;
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+    width:98px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#rating #fill{
+    position:absolute;
+    color:orange;
+    bottom:1px;
+    font-size:24px;
+    display:block;
+    overflow:hidden;
+}
+#rating #empty{
+    font-size:24px;
+}
+.button{
+    border: 1.5px solid darkkhaki;
+    background-color: rgba(189, 183, 107, 0.938);
+    font-size:18px;
+    float:right;
+    margin: 5px 12px;
+    padding: 0px 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight:bold;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.button:hover{
+    border: 1.5px solid rgba(243, 234, 101, 0.904);
+    background-color:#d7d870;
+    cursor:pointer;
+}
+/* SlideShow */
+.slideSection{
+    margin-top:25px;
+}
+.slideshow{
+    width:96%;
+    position:relative;
+    background-color:black;
+    margin: 5px 2%;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.slideshow img{
+    margin: auto;
+    width:100%;
+    height:500px;
+    display:none;
+    cursor:pointer;
+    
+}
+.fadeInSlide{
+    animation: fadeIn 1s ease;
+}
+/* Zooming the image */
+#imgModal{
+    background-color:black;
+    position:fixed;
+    height:100%;
+    width:100%;
+    display:none;
+    z-index:3;
+    left: 0;
+    top: 0;
+    text-align:center;
+    padding:100px 0px;
+}
+#zoomImg{
+    border: 2px solid white;
+    height:500px;
+    min-width:70%;
+    max-width:90%;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration:0.6s;
+    -moz-animation-name: zoom;
+    -moz-animation-duration:0.6s;
+    -o-animation-name: zoom;
+    -o-animation-duration:0.6s;
+}
+
+#close{
+    top: 0;
+    right:0;
+    padding: 2px 10px;
+    margin: 15px;
+    border: 1px solid rgba(255, 0, 0, 0.753);
+    font-weight:bold;
+    background-color:rgb(255, 37, 37);
+    font-size:32px;
+    color:white;
+    position:absolute;
+    overflow:hidden;
+}
+#close:hover{
+    cursor:pointer;
+    border: 1px solid rgba(158, 12, 12, 0.753);
+    background-color:rgb(189, 29, 29);
+}
+#back{
+    left:0%;
+    z-index:1;
+    margin-left:5px;
+}
+#next{
+    right:0%;
+    z-index:1;
+    margin-right:5px;
+}
+#pause,#play{
+    background-color:rgba(169, 169, 169, 0.5);
+    position:absolute;
+    font-size:16px;
+    color:white;
+    left:48%;
+    padding:5px 8px;
+    bottom:2%;
+    overflow:hidden;
+    border-radius: 50%;
+}
+#pause:hover,#play:hover,.slideIcon:hover{
+    background-color:grey;
+    cursor:pointer;
+}
+.slideIcon{
+    background-color:rgba(169, 169, 169, 0.5);
+    position:absolute;
+    font-size:32px;
+    color:white;
+    padding:0.5px 12px 0.5px;
+    top:48%;
+    overflow:hidden;
+    border-radius: 50%;
+}
+.slideShowBar{
+    text-align:center;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.slideShowBar img{
+    width: 8%;
+    height: 48px;
+    padding: 10px 5px;
+}
+.slideShowBar img:hover{
+    cursor:pointer;
+    filter: grayscale(60%);
+    border: 2px solid rgba(158, 158, 158, 0);
+    background-color:gray;
+}
+.slideShowBar .active{
+    background-color: rgb(46, 167, 248);
+    border: 2px solid rgb(46, 167, 248);
+}
+/* Game Requirement*/
+.requirement{
+    margin-top: 20px;
+    text-align:center;
+}
+.requirement h3{
+    font: italic 30px fantasy;
+    text-shadow: 1px 1px gold;
+    letter-spacing: 1.5px;
+    text-align:center;
+    margin-bottom:5px;
+    text-decoration:underline;
+    margin-top:2px;
+}
+.minSystemRequirement{
+    font: 16px 'Book Antiqua';
+    padding:10px 0px;
+    padding-right: 5px;
+    display:inline-block;
+    width:45%;
+    height:auto;
+}
+.recommendSystemRequirement{
+    font: 16px 'Book Antiqua';
+    padding:10px 0px;
+    padding-left: 5px;
+    display:inline-block;
+    width:45%;
+    height:auto;
+}
+
+@media screen and (max-width: 950px) {
+    .minSystemRequirement{
+        display:block;
+        width:80%;
+        margin: auto;
+    }
+    .recommendSystemRequirement{
+        display:block;
+        width:80%;
+        margin:auto;
+    }
+}
+@media screen and (max-width: 950px) {
+    .minSystemRequirement th{
+        font-size:14px;
+    }
+    .recommendSystemRequirement th{
+        font-size:14px;
+    }
+}
+
+.requirementTable{
+    text-align:center;
+    table-layout:fixed;
+    border:none;
+    padding: 0px 3%;
+    border-collapse: collapse;
+    background-color: rgba(70, 191, 247, 0.603);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.requirementTable th,td{
+    text-align:center;
+    padding: 5px 5px;
+    border: 1px solid black;
+}
+.requirementTable thead tr:first-of-type th{
+    border-top:none;
+}
+.requirementTable tr>th{
+    border-left: none;
+}
+.requirementTable tr td:last-of-type,.requirementTable tr th:last-of-type{
+    border-right:none;
+}
+.requirementTable tr:last-of-type th,.requirementTable tr:last-of-type td{
+    border-bottom:none;
+}
+/* User Review */
+.review{
+    margin: 15px 0px 0px;
+    padding: 10px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #2983f838;
+}
+.review h3{
+    font: italic 30px Palatino;
+    text-shadow: 1px 1px black;
+    color:white;
+    letter-spacing: 1.5px;
+    text-align:center;
+    margin-top:2px;
+    margin-bottom:5px;
+    text-decoration:underline;
+}
+div.userReview{
+    padding: 0px 10px;
+    margin: 10px 10px;
+    background-color:#99bcdcab;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow:hidden; 
+}
+div.user{
+    display:inline-block;
+    width:15%;
+    font-size:20px;
+    text-align:center;
+    padding: 10px 5px;
+    border-right: 2px solid black;
+    overflow:hidden; 
+}
+div.user img{
+    border-radius:50%;
+    width:32x;
+    height:32px;
+}
+div.user p{
+    margin:0px;
+}
+#male{
+    color:lightblue;
+}
+#female{
+    color:pink;
+}
+div.comments{
+    display:inline-block;
+    padding: 0px 1%;
+    min-width:50%;
+    max-width:75%;
+    font-size:18px;
+    overflow:hidden; 
+}
+div.comments p{
+    padding:0px;
+    margin:0px;
+}
+.comments .fa-thumbs-up{
+    padding: 5px 5px;
+    background-color:lightgreen;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:black;
+    margin-top:5px;
+    text-align:left;
+    display:inline-block;
+    font-size:15px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.comments .fa-thumbs-down{
+    padding: 5px 5px;
+    background-color:rgb(255, 68, 68);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:black;
+    margin-top:5px;
+    text-align:left;
+    display:inline-block;
+    font-size:15px;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#date{
+    font-size:12px;
+    font-style:italic;
+}
+
+.reviewForm{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    width:40%;
+    font-size:16px;
+    background-color: #99bcdcab;
+}
+.reviewForm div{
+    margin: 10px 0px;
+}
+#nameL,#genderL,#recommendationL,#rateL,#commentsL{
+    font-weight:bold;
+    font-size:16px;
+    padding-right: 5px;
+}
+label .fa-thumbs-up{
+    padding: 5px 5px 5px 0px;
+    color:lightgreen;
+    margin-top:5px;
+    text-align:left;
+    display:inline-block;
+    font-size:15px;
+}
+label .fa-thumbs-down{
+    padding: 5px 5px 5px 0px;
+    color:rgb(255, 68, 68);
+    margin-top:5px;
+    text-align:left;
+    display:inline-block;
+    font-size:15px;
+}
+label input{
+    padding: 10px 0px;
+}
+
+input{
+    border:none;
+}
+input[type="text"]{
+    height:17px;
+    background-color:rgba(255, 255, 255);
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2px 8px;
+}
+input[type="text"]:first-of-type{
+    width:90%;
+}
+input[type="text"]:focus{
+    border:2px solid rgb(52, 130, 255);
+    outline:none;
+}
+input[type="range"]{
+    padding: 0px 2px;
+}
+@media screen and (max-width: 1179px) {
+    form #recommendationL{
+        display: block;
+    }
+}
+#rateValue{
+    text-align:center;
+}
+::placeholder{
+    text-align:center;
+}
+::-moz-placeholder{
+    text-align:center;
+}
+:-ms-input-placeholder{
+    text-align:center;
+}
+::-moz-placeholder{
+    text-align:center;
+}
+::-webkit-input-placeholder{
+    text-align:center;
+}    
+textarea{
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 5px;
+    margin-top:5px;
+    width:100%;
+    resize:none;
+}
+textarea:focus{
+    border:2px solid rgb(52, 130, 255);
+    outline:none;
+}
+.required{
+    color:red;
+    font-size:16px;
+}
+#button{
+    text-align:center;
+}
+input[type="submit"]{
+    padding:8px 15px;
+    font-size:14px;
+    color:white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color:#319e4a;
+    border-color:#319e4a;
+}
+input[type="submit"]:hover{
+    background-color:#1f7c35;
+    cursor:pointer;
+}
+input[type="reset"]{
+    padding:8px 15px;
+    font-size:14px;
+    color:white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color:#dc3545;
+    background-color:#dc3545;
+}
+input[type="reset"]:hover{
+    background-color:#af2937;
+    cursor:pointer;
+}
+/*Succesful Add to Cart Modal Box*/
+#addBox{
+    top:0;
+    left:0;
+    position:fixed;
+    z-index:3;
+    overflow:auto;
+    height:100%;
+    width:100%;
+    padding-top:100px;
+    background-color: rgb(0,0,0,0.4);
+    display:none;
+}
+#addBox .contents{
+    position:relative;
+    width:80%;
+    margin: 0px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #888;
+    background-color: rgb(46, 161, 37);
+    padding: 0px;
+}
+#addBox .contents .header{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:white;
+}
+#addBox .contents .body{
+    background-color: white;
+    padding: 16px;
+}
+#addBox .contents .body #addButton{
+    text-align:center;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#addBox .contents .body #addButton .continue{
+    display:inline-block;
+    width: 135px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 169, 41);
+    padding:10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+}
+#addBox .contents .body #addButton .continue:hover{
+    background-color: rgba(236, 147, 12, 0.9);
+    cursor:pointer;
+}
+#addBox .contents .body #addButton .shopping{
+    display:inline-block;
+    width: 145px;
+    background-color: rgb(255, 169, 41);
+    margin-left:2%;
+    padding:10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+}
+#addBox .contents .body #addButton .shopping:hover{
+    background-color: rgba(236, 147, 12, 0.9);
+    cursor:pointer;
+}
+#addBox .contents .footer{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:white;
+}
+
+/*Download Modal Box*/
+#downloadBox{
+    top:0;
+    left:0;
+    position:fixed;
+    z-index:3;
+    overflow:auto;
+    height:100%;
+    width:100%;
+    padding-top:100px;
+    background-color: rgb(0,0,0,0.4);
+    display:none;
+}
+#downloadBox .contents{
+    position:relative;
+    width:80%;
+    margin: 0px auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #888;
+    background-color: rgb(46, 161, 37);
+    padding: 0px;
+}
+#downloadBox .contents .header{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:white;
+}
+#downloadBox .contents .body{
+    background-color: white;
+    padding: 16px;
+}
+#downloadBox .contents .body #downloadButton{
+    text-align:center;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#downloadBox .contents .body #downloadButton .cancel{
+    display:inline-block;
+    width: 135px;
+    background-color: rgb(253, 19, 19);
+    padding:10px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:white;
+    font-weight:bold;
+}
+#downloadBox .contents .body #downloadButton .cancel:hover{
+    background-color: rgba(192, 15, 15, 0.767);
+    cursor:pointer;
+}
+#downloadBox .contents .body #downloadButton .direct{
+    display:inline-block;
+    width: 145px;
+    background-color: rgb(255, 169, 41);
+    margin-left:2%;
+    padding:10px 20px;
+    margin-top: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+}
+#downloadBox .contents .body #downloadButton .direct:hover{
+    background-color: rgba(236, 147, 12, 0.9);
+    cursor:pointer;
+}
+#downloadBox .contents .footer{
+    font-size:28px;
+    font-weight: bold;
+    padding: 16px;
+    text-align:center;
+    color:white;
+}
+.gamePreview{
+    text-align:center;
+    margin: auto;
+}
+.gamePreview iframe{
+    background-image: url(../Media/gamePreview.jpg);
+    padding: 10px;
+}
+@media screen and (max-width: 900px) {
+    .gamePreview iframe{
+        width:85%;
+    }
+}
+.gamePreview h3{
+    font: italic 30px fantasy;
+    text-shadow: 1px 1px gold;
+    letter-spacing: 1.5px;
+    text-align:center;
+    margin-bottom:5px;
+    text-decoration:underline;
+    margin-top:2px;
+}

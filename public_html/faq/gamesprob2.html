@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The computer crashes when playing games - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/FAQ/gamesprob2.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p id="top"><i class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a class="active" href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li class="active"><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <h1>The computer crashes when playing games</h1>
+            <!--https://www.partitionwizard.com/partitionmagic/computer-crashes-when-playing-games.html-->
+            <p>The computer crashes when playing games. It is a rather frustrating thing for game players. This article will display some effective solutions to help you solve this issue.</p>
+            <ul style="list-style-type: none;">
+                <li><a href="#1"># 1: Too Many Programs Running in Background – Closing Them</a></li>
+                <li><a href="#2"># 2: Graphics Card Drivers Incompatible with Windwos 10 – Installing Lastest Drivers</a></li>
+                <li><a href="#3"># 3: Onboard Sound Device Conflicting with Other Devices – Disabling It</a></li>
+                <li><a href="#4"># 4: Improper Software in Computer – Checking It</a></li>
+                <li><a href="#5"># 5: Malware and Virus on Computer – Scanning Them</a></li>
+                <li><a href="#6"># 6: Bad Sectors on Hard Drive– Checking Them</a></li>
+                <li><a href="#7"># 7: Computer Overheating – Cooling It</a></li>
+            </ul>
+            <br>
+            <br>
+            <br>
+            <div id="1"><br><br>
+                <h2># 1: Too Many Programs Running in Background – Closing Them</h2>
+                <p>The first possible software issue is that too many programs are running in background and they take up lots of memory. In this situation, your game may cannot gain access to the memory it needs, and it will either crash or run very slowly.</p>
+    
+                <p>Therefore, it is always wise to close background programs before playing game on your computer.</p>
+            </div>
+            <div id="2"><br><br>
+                <h2># 2: Graphics Card Drivers Incompatible with Windwos 10 – Installing Lastest Drivers</h2>
+                <p>Nowadays, most computer users have upgraded to Windows 10 and play games on this operating system. It can be said that this OS is very gamer-friendly. However, one of the most common problems of the Windows 10 is driver compatibility.</p>
+    
+                <p>Therefore, "computer crashes when playing games on Windows 10" can be blamed to the incompatibility between your current graphics card driver and this operating system.</p>
+    
+                <p>Considering this reason, you should install the latest update for your graphics card drivers via Device Manager or Windows Update if there is any at this time.</p>
+            </div>
+            <div id="3"><br><br>
+                <h2># 3: Onboard Sound Device Conflicting with Other Devices – Disabling It</h2>
+                <p>Actually, the sound driver of Windows 10 collides with other devices (especially GPU) in many times.</p>
+    
+                <p>This confliction will lead to GPU failure, resulting in computer crashes.</p>
+    
+                <p>Therefore, you can disable the onboard sound device to avoid computer crashes again when playing games.</p>
+    
+                <blockquote>To do that, please open Device Manager again and then do the following operations:
+                    <ul>
+                        <li>Navigate to Sound, video and game controllers, double-click it, and right-click the onboard sound device to disable it.</li>
+                        <li>Restart your computer.</li>
+                    </ul>
+            </div>
+            <div id="4"><br><br>
+                <h2># 4: Improper Software in Computer – Checking It</h2>
+                <p>Nowadays, most games require some additional software to work properly, like DirectX and Java.</p>
+                <p>Therefore, you need to make sure that you install the required software from the trusted and official website. If you cannot confirm which software you need for your games, you can get relevant information from Google or read the games’ documentation.</p>
+            </div>
+            <div id="5"><br><br>
+                <h2># 5: Malware and Virus on Computer – Scanning Them</h2>
+                <p>One of the probable software issues related to computer crashing is malware and virus. Therefore, you need to start scanning your device for malware and virus issues. To do that, you can enable Windows Defender. Or you can run reliable third-party antivirus programs.</p>
+            </div>
+            <div id="6"><br><br>
+                <h2># 6: Bad Sectors on Hard Drive– Checking Them</h2>
+                <p>There is a possibility that your hard drive has developed some bad sectors. This can lead to computer crashes when starting games. Therefore, you can try checking the bad sectors on your hard drive</p>
+    
+            </div>
+            <div id="7"><br><br>
+                <h2># 7: Computer Overheating – Cooling It</h2>
+                <p>As we know, games running on computer are power-intensive. If your computer becomes overheating, it will automatically shut down in case the CPU or GPU temperature hits the critical levels. This can protect itself from major hardware failures.</p>
+    
+                <p>In this situation, you need to check the cooling components to see if they are working properly and clean the fan and every other hardware of dust and other debris. Applying thermal paste on the CPU is a must. It will reduce the overheating substantially.</p> 
+                    
+                <blockquote>Note: Do not leave the wool of the brush or the cotton swab on the board and components as a new source of crash. Furthermore, you’d better clean your computer once a year.</blockquote>
+                <p>Moreover, you can also add some additional coolers if there is free space to do it. But please make sure that your power supply is not overwhelmed.</p>
+                    
+                <p>You also can download some reliable software from website to help you monitor your computer temperature.</p>
+                    
+                <p style="font-weight: bold;">Some other issues can also lead to computer crashes when playing games:</p>
+                <ul>
+                    <li>The power supply is unstable and insufficient. Facing this issue, you can switch to high-quality power supply.</li>
+                    <li>The components of your computer are aging. It might be time to upgrade to newer hardware.</li>
+                    <li>Your memory bank features poor stability. In this situation, you need to buy a reliable product for your computer.</li>
+                    <li>There is another possibility that the game you are playing is so old (10+ years) that it is incompatible with Windows 10.</p></li>
+                </ul>
+                
+                
+                
+                
+            </div>
+            
+            <br><br>
+            <hr>
+            <p><a href="../contactUs.html">Need more help?? Click here to Contact Unfade</a></p>
+           </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>

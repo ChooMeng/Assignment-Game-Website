@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Access Game Instantly - UNFADE</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Games, RPG, FPS, Horror">
+        <meta name="author" content="Poh Choo Meng, William Choong, Chew Wei Chung, Choo Zhi Yan">
+        <meta name="description" content="Unfade provides many awesome games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/default.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/AboutUs/games_intro.css">
+        <link rel="stylesheet" href="../CSS/animation.css" type="text/css">
+        <script src="https://kit.fontawesome.com/3f628a0091.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../Media/leaf.png" type="image/x-icon"/>
+    </head>
+    <body onload="cancelLoading()">
+        <div id="loading" class="loading">
+            <div class="loader"></div>
+            <img src="../Media/loading.gif" width="30%" height="auto">
+        </div>
+        <button id="scrollToTop" onclick="scrollFunction()">
+            <p><i style="color:black" class="fas fa-arrow-up"></i></p>
+        </button>
+        <script src="../JavaScript/default.js"></script>
+        <header>
+            <a href="../mainPage.html"><img id="logo" src="../Media/logo.gif" width="100%"></a>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li id="sideMode"><a onclick="openSideNav()">&#9776</a>
+                    <div class="sideBar">
+                        <a href="../mainPage.html"><i class="fas fa-home"></i> Home</a>
+                        <a href="../news.html" ><i class="far fa-newspaper"></i> News</a>
+                        <a href="../gameslist.html" onmouseover="openGameList()" onmouseout="openGameList()"><i class="fas fa-gamepad" ></i> Games</a>
+                        <a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a>
+                        <a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a>
+                        <a class="active" href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a>
+                        <a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a>
+                        <div class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                            <div class="sideBardropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                                <a href="../signin.html#signin">Login</a>
+                                <a href="../register.html#register">Register</a>
+                                <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sideGameMenu" onmouseover="gamenavHover()" onmouseout="gamenavUnHover()">
+                        <div class="siderpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidefpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="sidehorrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../mainPage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../news.html" ><i class="far fa-newspaper"></i> News</a></li>
+                <li class="game"><a href="../gameslist.html" ><i class="fas fa-gamepad"></i> Games</a>
+                    <div class="gameMenu" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <div class="rpgType">
+                            <h1>Role-playing Games</h1>
+                            <a href="../GameDetails/Undertale/Undertale.html">Undertale <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bloodborne/Bloodborne.html">Bloodborne <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Darksouls3/Darksouls3.html">Dark Souls 3 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Borderlands2/Borderlands2.html">Borderlands 2 <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html">Assassin's Creed Odyssey <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="fpsType">
+                            <h1>First-person Shooting Games</h1>
+                            <a href="../GameDetails/CallofDuty/CallofDuty.html">Call of Duty <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Prodeus/Prodeus.html">Prodeus <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Bulletstorm/Bulletstorm.html">Bulletstorm <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/UberStrike/UberStrike.html">UberStrike <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/BattleField3/BattleField3.html">Battlefield 3 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                        <div class="horrorType">
+                            <h1>Horror Games</h1>
+                            <a href="../GameDetails/ParanormalHK/ParanormalHK.html">Paranormal HK <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Outlast/Outlast.html">Outlast <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/HalfLife/HalfLife.html">Half Life <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html">A-Tech Cybernetic VR <i class="fas fa-chevron-circle-right"></i></a>
+                            <a href="../GameDetails/Left4Dead2/Left4Dead2.html">Left 4 Dead 2 <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../market.html" ><i class="fas fa-shopping-basket"></i> Marketplace</a></li>
+                <li><a href="../topup.html" ><i class="fas fa-donate"></i> Topup</a></li>
+                <li class="active"><a href="../aboutus.html" ><i class="fas fa-address-card"></i> About Us</a></li>
+                <li ><a href="../faq.html" ><i class="fas fa-question"></i> FAQ</a></li>
+                <li class="account"><a href="#" ><i class="fas fa-user"></i> Account</a>
+                    <div class="dropdown" onmouseover="navHover(this)" onmouseout="navUnHover(this)">
+                        <a href="../signin.html#signin">Login</a>
+                        <a href="../register.html#register">Register</a>
+                        <a href="../forgotpassword.html#forgotP">Forgot Password</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <section>
+            <h1>Access Game Instantly</h1>
+            <br><br><br>
+            <div>
+                <a href="../gameslist.html" title="Go to the game list"><img src="../Media/Aboutus/gamelist.png" style="float: right;"></a>
+                <p style="width: 500px;
+                text-align: center;
+                background-color: rgb(27, 20, 126); padding: 20px; border: solid 3px rgb(208, 255, 0);">With nearly 30,000 games from AAA to indie and everything in-between.Enjoy exclusive deals, automatic game updates, and other great perks.</p>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div>
+                <map id="imgmap" name="imgmap">
+                <area coords="186, 27, 355, 105" href="../GameDetails/Darksouls3/Darksouls3.html" shape="rect">
+                <area coords="128, 121, 214, 163" href="../GameDetails/Assassin'sCreedOdyssey/assassin'screedodyssey.html" shape="rect">
+                <area coords="135, 202, 304, 281" href="../GameDetails/Prodeus/Prodeus.html" shape="rect">
+                <area coords="72, 341, 156, 381" href="../GameDetails/HalfLife/HalfLife.html" shape="rect">
+                <area coords="33, 258, 140, 258, 138, 279, 198, 279, 197, 332, 34, 332" href="../GameDetails/Left4Dead2/Left4Dead2.html" shape="polygon">
+                <area coords="173, 349, 341, 428" href="../GameDetails/Bulletstorm/Bulletstorm.html" shape="rect">
+                <area coords="639, 29, 806, 28, 805, 95, 749, 95, 748, 105, 639, 104" href="../GameDetails/BattleField3/BattleField3.html" shape="polygon">
+                <area coords="747, 95, 832, 132" href="../GameDetails/Borderlands2/Borderlands2.html" shape="rect">
+                <area coords="619, 134, 704, 173" href="../GameDetails/CallofDuty/CallofDuty.html" shape="rect">
+                <area coords="709, 181, 879, 260" href="../GameDetails/A-TechCyberneticVR/A-TechCyberneticVR.html" shape="rect">
+                <area coords="658, 263, 743, 303" href="../GameDetails/Outlast/Outlast.html" shape="rect">
+                <area coords="741, 307, 910, 387" href="../GameDetails/Undertale/Undertale.html" shape="rect">
+                </map>
+                <img src="../Media/Aboutus/imgmap.png" id="imagemap" usemap="#imgmap" style="border: none;">
+            </div>
+            <br><br><br><br><br><br><br>
+            <div>
+                <figure>
+                    <a href="../GameDetails/Bloodborne/Bloodborne.html" title="Click here to access to the link" target="_blank">
+                        <img src="../Media/Aboutus/gameDetails1.png" style="width: 100%; height: auto;">
+                        <figcaption style="text-align: center;">
+                        Bloodborne
+                        </figcaption>
+                    </a>
+                </figure>
+                <div id="details_benefit">
+                    <p>Our store will provide more details such as : </p>
+                    <ul style="list-style-type: none;">
+                        <li>Price</li>
+                        <li>Description</li>
+                        <li>Images</li>
+                        <li>Game Requirements</li>
+                        <li>Review</li>
+                    </ul>
+                    <p>to let our customer know more about the game details as more as possible.</p>
+                </div>
+            </div>
+            <div>
+                <a href="../GameDetails/Bloodborne/Bloodborne.html#requirement">
+                    <img src="../Media/Aboutus/requirements.png" title="Go to refer the requirements">
+                </a>
+                <p style="text-align: center; padding: 10px; background-color: rgb(124, 101, 255); border-radius: 20px; border: white solid 3px;">
+                    To let our respecful customer to experience a high quality gaming expericence, we have provide the table of game requirements to let the user know the requirements of this game. This can help them to know some information before they bought.
+                </p >
+            </div>
+            <div>
+                <a href="../GameDetails/Bloodborne/Bloodborne.html#review" title="Go to refer the review section to read the comments">
+                    <img src="../Media/Aboutus/reviews.png" alt="">
+                </a>
+                <p style="text-align: center; padding: 10px; background-color: rgb(255, 101, 101); border-radius: 20px; border: white solid 3px;">
+                    At the bottom of the games requirement, it has a review section for the user to look at the other user's comment.
+                </p>
+            </div>
+            <div style="display: inline-block;" id="comment">
+                
+                
+                <a href="../GameDetails/Bloodborne/Bloodborne.html#reviewForm" title="Click here jump to the comment section">
+                    <img src="../Media/Aboutus/comment.png" style="margin: 50px; float: left;">
+                </a>
+                <p style="text-align: center; 
+                    float: right;
+                    margin: auto;
+                    border-radius: 25px;
+                    padding: 20px 10px;
+                    background-color: salmon;">
+                    Users are able to give some comment for these games to let the other users to review their comment.
+                </p>
+                
+            </div>
+        </section>
+        <footer>
+            Copyright &copy; 2020 All Right Reserved by UNFADE
+            <div id="socialmedia">
+                <a href="https://www.facebook.com/"><img src="../Media/facebook.png"></a>
+                <a href="https://twitter.com/twitter"><img src="../Media/twitter.png"></a>
+                <a href="https://www.youtube.com/"><img src="../Media/youtube.png"></a>
+                <a href="https://www.instagram.com/"><img src="../Media/instagram.png"></a>
+            </div>
+        </footer>
+    </body>
+</html>
