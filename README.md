@@ -1,4 +1,4 @@
-# Game Website
+# Assignment - Game Website
 Assignment: AACS1193  Web Design and Development
 
 Programme: Diploma in Science (Information Technology) 
@@ -15,8 +15,7 @@ Author:
 
 Website Type: Game Website
 
-Programming Language:
-[HTML, JavaScript, CSS]
+Programming Language: [HTML, JavaScript, CSS]
 
 System Requirements:
   - Visual Studio Code
@@ -29,12 +28,8 @@ Browser Supported:
 
 Browser not supported:
   - Internet Explorer (It may not work as expected)
-
-########################################################################
-
-                          Website Information
-                          
-########################################################################
+ 
+## Website Information
 
 DiscountCode for shopping cart:
  - 1831-123488 [10%]
