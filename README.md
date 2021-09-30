@@ -1,3 +1,5 @@
+![logo](https://user-images.githubusercontent.com/86212287/135412993-cee7996e-aa05-4361-afdb-5acacbd705cc.gif)
+
 # Assignment - Game Website
 Assignment: AACS1193  Web Design and Development
 
