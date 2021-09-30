@@ -1,7 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/86212287/135412993-cee7996e-aa05-4361-afdb-5acacbd705cc.gif)
 
 # Unfade - Game Website
-Assignment: AACS1193  Web Design and Development
+Assignment: AACS1193 Web Design and Development
 
 Programme: Diploma in Science (Information Technology) 
 
@@ -47,6 +47,6 @@ Account:
  - sky [sky0621]
 
 ************************************************************************
-		     COPYRIGHT © ChooMeng 2019. All Right Reserved.
-	    Web Application is under GNU General Public License v3.0
+	     COPYRIGHT © ChooMeng 2020. All Right Reserved.
+	    Website is under GNU General Public License v3.0
 ************************************************************************
