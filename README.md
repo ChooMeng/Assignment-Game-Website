@@ -15,6 +15,8 @@ Author:
 
 Website Type: Game Website
 
+Company Name: Unfade
+
 Programming Language: [HTML, JavaScript, CSS]
 
 System Requirements:
